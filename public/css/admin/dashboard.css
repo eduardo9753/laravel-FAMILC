@@ -1,0 +1,10 @@
+#menu .grilla-menu {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2rem;
+}
+
+#menu .menu-caja {
+    text-align: center;
+    margin-bottom: .5rem;
+}

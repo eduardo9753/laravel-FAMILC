@@ -1,0 +1,176 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
+use App\Models\Category;
+use App\Models\Photo;
+use App\Models\Product;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Intervention\Image\Facades\Image;
+
+class ProductController extends Controller
+{
+    //PROTEGIENDO LAS RUTAS
+    public function __construct()
+    {
+        //ESTA LINEA PROTEGRA A TODOS LOS METODOS 
+        $this->middleware('auth');
+
+        /*ESTA LINEA PROTEGERA SOLO A LOS METODOS QUE LE PASES
+        $this->middleware('auth' , ['only' => ['index','create']]);*/
+
+        /**ESTE METODO PROTEGERA A LOS METODOS EXCEPTO A LOS METODOS QUE LE PASES
+        $this->middleware('auth')->except(['show','index']);*/
+    }
+
+    //FUNCION INDEX "TABLA DE DATOS PRODUCTOS"
+    public function index()
+    {
+        //ESTE ES UN ARREGLO DE DATOS POR ESO SI QUIERES PASAR LA CLASE
+        //PASALO CON SU DEBIDO VALOR QUE ESTA EN LA RUTA "web"
+        $product = DB::select('SELECT  
+        p.id AS "id",
+        p.nombre AS "nombre",
+        p.slug AS "slug",
+        p.precio AS "precio",
+        p.estado AS "estado",
+        c.nombre AS "categoria",
+        c.id AS "idCategoria",
+        u.name AS "usuario"
+        
+        FROM products p 
+        INNER JOIN categories c ON p.category_id = c.id
+        INNER JOIN users u ON p.user_id = u.id');
+
+
+        return view('admin.producto.index', [
+            'product' => $product
+        ]);
+    }
+
+    public function create()
+    {
+        $category = Category::all();
+        return view('admin.producto.create', [
+            'category' => $category
+        ]);
+    }
+
+
+    public function store(Request $request)
+    {
+        //CREAMOS EL SLUG CON LA VARIABLE "slug" Y LE AGREGAMOS LO QUE VIENE EN EL CAMPO "nombre"
+        $request->request->add(['slug' => Str::slug($request->nombre)]);
+        //echo $slug = $request->slug;
+
+        //validar los datos
+        $this->validate($request, [
+            'nombre' => 'required|unique:products|max:50', //METERLE UN UNIQUE
+            'precio' => 'required',
+            'foto_uno' => 'required',
+            'foto_dos' => 'required',
+            'foto_tres' => 'required'
+        ]);
+
+        //GUARDANDO LAS FOTOS EN EL SERVIDOR
+        if ($request->foto_uno) {
+            //IMAGEN NUMERO UNO
+            $imagen_uno = $request->file('foto_uno'); //NOMBRE DEL INPUT
+            $nombreImagen_uno = Str::uuid() . "." . $imagen_uno->extension(); //DANDOLE UN ID UNICO A LA IMAGEN
+
+            $imagenServidor = Image::make($imagen_uno); //CREANDO LA IMAGEN CON Intervation
+            $imagenServidor->fit(400, 400);       //DANDOLE TAMAÑO UNICO
+
+            $imagen_path_uno = public_path('tazas') . "/" . $nombreImagen_uno; //DIRECCIONANDO A LA RUTA
+            $imagenServidor->save($imagen_path_uno);      //GUARDANDO IMAGEN
+        }
+
+        if ($request->foto_dos) {
+            //IMAGEN NUMERO DOS
+            $imagen_dos = $request->file('foto_dos'); //NOMBRE DEL INPUT
+            $nombreImagen_dos = Str::uuid() . "." . $imagen_dos->extension(); //DANDOLE UN ID UNICO A LA IMAGEN
+
+            $imagenServidor = Image::make($imagen_dos); //CREANDO LA IMAGEN CON Intervation
+            $imagenServidor->fit(400, 400);       //DANDOLE TAMAÑO UNICO
+
+            $imagen_path_dos = public_path('tazas') . "/" . $nombreImagen_dos; //DIRECCIONANDO A LA RUTA
+            $imagenServidor->save($imagen_path_dos);      //GUARDANDO IMAGEN
+        }
+
+        if ($request->foto_tres) {
+            //IMAGEN NUMERO DOS
+            $imagen_tres = $request->file('foto_tres'); //NOMBRE DEL INPUT
+            $nombreImagen_tres = Str::uuid() . "." . $imagen_tres->extension(); //DANDOLE UN ID UNICO A LA IMAGEN
+
+            $imagenServidor = Image::make($imagen_tres); //CREANDO LA IMAGEN CON Intervation
+            $imagenServidor->fit(400, 400);       //DANDOLE TAMAÑO UNICO
+
+            $imagen_path_tres = public_path('tazas') . "/" . $nombreImagen_tres; //DIRECCIONANDO A LA RUTA
+            $imagenServidor->save($imagen_path_tres);      //GUARDANDO IMAGEN
+        }
+
+        //guardar los datos del producto
+        $save = Product::create([
+            'nombre' => $request->nombre,
+            'precio' => $request->precio,
+            'slug' => $request->slug,
+            'descripcion' => $request->descripcion,
+            'estado' => 1, //1 actrivo 2 incativo
+            'user_id' => auth()->user()->id,
+            'category_id' => $request->categoria
+        ]);
+
+        //guardar las fotos del producto en la tabla de photos
+        $ultimo_id_producto = $save->id;
+
+        Photo::create([
+            'product_id' => $ultimo_id_producto,
+            'foto_uno' => $nombreImagen_uno,
+            'foto_dos' => $nombreImagen_dos,
+            'foto_tres' => $nombreImagen_tres
+        ]);
+
+        //REDIRECCIONAMOS
+        return redirect()->route('admin.product.index');
+    }
+
+    public function show(Product $product)
+    {
+        //ESTE ES UN OBJETO POR ESO SE PASA DE FRENTE A LA VISTA
+        $category = Category::all();
+        $categoria_producto = Category::find($product->category_id);
+        return view('admin.producto.show', [
+            'product' => $product,
+            'category' =>  $category,
+            'categoria_producto' => $categoria_producto
+        ]);
+    }
+
+    public function update(Product $product, Request $request)
+    {
+        //CREAMOS EL SLUG CON LA VARIABLE "slug" Y LE AGREGAMOS LO QUE VIENE EN EL CAMPO "nombre"
+        $request->request->add(['slug' => Str::slug($request->nombre)]);
+
+        //validar los datos
+        $this->validate($request, [
+            'nombre' => 'required|max:50', //METERLE UN UNIQUE
+            'precio' => 'required',
+            'descripcion' => 'required',
+        ]);
+
+        //ACTUALIZANDO LOS DATOS
+        $product->nombre = $request->nombre;
+        $product->precio = $request->precio;
+        $product->slug = $request->slug;
+        $product->descripcion = $request->descripcion;
+        $product->category_id = $request->categoria;
+        $product->save();
+
+        //RETORNAMOS LA VISTA CON LA TABLA DE DATOS
+        return redirect()->route('admin.product.index');
+
+    }
+}

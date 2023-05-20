@@ -1,0 +1,13 @@
+
+/*ARRANCA DESDE EL MINIMO 0PX DE ANCHO HASTA EL MAXIMO DE 800PX DE ANCHO*/
+@media (min-width: 0px) and (max-width: 800px){ 
+    
+    #contacto .contacto-grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    #contacto .contacto-caja-uno iframe {
+        width: 100%;
+        height: 250px;
+    }
+}

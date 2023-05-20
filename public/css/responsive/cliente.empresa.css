@@ -1,0 +1,12 @@
+
+/*ARRANCA DESDE EL MINIMO 0PX DE ANCHO HASTA EL MAXIMO DE 800PX DE ANCHO*/
+@media (min-width: 0px) and (max-width: 800px){ 
+    
+    #empresa .empresa-grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    #empresa .empresa-parrafo {
+        font-size: .8rem;
+    }
+}

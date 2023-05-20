@@ -1,0 +1,14 @@
+:root {
+    --colorGeneral : #673de6;
+    --colorGeneralTransparente : rgba(103, 61, 230, 0.836);
+    --blanco : #FFFFFF;
+    --blancoTrasparente : rgba(255, 255, 255, 0.597);
+    --fuentePrincipal : font-family: 'Krub', sans-serif;
+    --gris : #ffffffab;
+    --negro : #000;
+    --negroTrasparente : rgba(0,0,0,0.234);
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}

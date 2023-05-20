@@ -1,0 +1,315 @@
+
+/*****************************************ESTILOS HEADER*********************************************/
+#header {
+    /*background-image: url(../img/home/taza-header.jpg);
+                         /*ARRIBA -  A LOS COSTADOS
+    background-position: calc(100% - 65%) calc(100% - 65%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+
+    ACTIVAMOS POSITION RELATIVE*/
+    position: relative;
+    min-height: 100vh;
+}
+
+#header video{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#header .header-descripcion {
+    position: absolute;
+    top: 0;
+
+    /*poscicion al medio*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+#header .titulo-header {
+    color: var(--blanco);
+    font-weight: 500;
+    font-size: 3.5rem;
+}
+
+#header .parrafo-header {
+    background-color: var(--colorGeneralTransparente);
+    border-radius: 30px;
+    padding: .5rem 3rem;
+    color: var(--blanco);
+    line-height: 2;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+
+
+/*************************************ESTILOS PRODUCTOS*****************************************/
+#producto .producto-grilla {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+#producto .producto-caja-relative { /*position relative para poder hascer los estilos dentro de su caja*/
+    position: relative;
+    width: 100%;
+}
+/*para la imagen mayor izquierda que tengan el mismo tamaño para que nondejen bordes*/
+#producto .producto-grilla-uno .producto-caja-relative{
+    height: 540px;
+}
+#producto .producto-grilla-uno .producto-caja-relative img {
+    height: 540px;
+}
+
+#producto .producto-grilla-dos {
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+}
+
+/*para las 4 imagenes derecho para que esten a la misma altura se le dividio 540/2*/
+#producto .producto-grilla-dos .producto-caja-relative{
+    height: 270px;
+}
+#producto .producto-grilla-dos .producto-caja-relative img {
+    height: 270px;
+}
+
+#producto .producto-descripcion {
+    position: absolute; /*position absolute*/
+    top: 0;
+    color: transparent; /*si quieres que aparezca la letra poder colo blanco*/
+
+    /*poscicion al medio*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+#producto .producto-descripcion:hover {
+    background-color: var(--colorGeneralTransparente);
+    transition: all .5s ease-in-out;
+    color: var(--blanco);
+}
+
+
+
+
+
+
+/*****************************************ESTILOS SECCION TAZAS***********************************/
+#tazas .taza-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+#tazas .taza {
+    text-align: center;
+}
+
+#tazas .taza .taza-img {
+    position: relative;
+}
+
+#tazas .taza .taza-descripcion h2 {
+    color: var(--colorGeneral);
+    font-weight: 400;
+}
+#tazas .taza .taza-descripcion p{
+    margin-top: 1rem;
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#tazas .taza .taza-color-mitad{
+    position: absolute;
+    top: 0;
+    height: 300px;
+    width: 50%;
+    background: var(--colorGeneralTransparente);
+}
+
+#tazas .taza img {
+    height: 300px;
+    vertical-align: middle;
+}
+
+#tazas .taza .taza-descripcion {
+    -webkit-box-shadow: 3px 8px 67px 21px rgba(189,189,189,1);
+    -moz-box-shadow: 3px 8px 67px 21px rgba(189,189,189,1);
+    box-shadow: 3px 8px 67px 21px rgba(189,189,189,1);
+    padding: 1rem;
+}
+
+#tazas .taza .taza-descripcion h2{
+    text-align: center;
+}
+
+#tazas .taza .taza-descripcion p{
+    text-align: center;
+}
+
+
+
+
+
+/********************************************ESTILOS TAZA FONDO*****************************************/
+#taza-fondo {
+    background-image: linear-gradient(var(--colorGeneralTransparente),rgba(0,0,0,0.5)), url(../img/home/taza-fondo.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 80vh;
+
+    /*POSICIONAMOS EL DIV INTERTO*/
+    position: relative;
+}
+
+#taza-fondo .taza-fondo-img  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#taza-fondo .taza-fondo-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    opacity: .7;
+}
+
+#taza-fondo .taza-fondo-descripcion {
+    text-align: center;
+}
+
+#taza-fondo .taza-fondo-titulo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: var(--blanco);
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+
+
+/******************************************ESTILOS CONOCENOS**************************************/
+#conocenos .conocenos-grilla {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#conocenos .conocenos-img{
+    position: relative;
+}
+
+#conocenos .conocenos-fondo {
+    position: absolute;
+    background-color: var(--colorGeneralTransparente);
+    height: 700px;
+    width: 50%;
+    top: 0;
+}
+
+#conocenos .conocenos-img img{
+   width: 459px;
+   height: 700px;
+}
+
+#conocenos .conocenos-descripcion .conocenos-span{
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+#conocenos .conocenos-descripcion .conocenos-titulo{
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--colorGeneral);
+}
+  
+#conocenos .conocenos-descripcion  .conocenos-parrafo{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************************ESTILOS TAZA********************************************/
+#footer {
+    background-color: var(--colorGeneral);
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+#footer .footer-grilla {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 3rem;
+}
+
+#footer .footer-img img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+#footer .footer-flex {
+    display: flex;
+    column-gap: .5rem;
+}
+
+#footer .footer-titulo{
+    color: var(--blanco);
+    font-size: 1.1rem;
+    padding-bottom:1rem;
+    font-weight: 300;
+}
+
+#footer .footer-parafo a{
+    color: var(--blanco);
+    font-weight: 300;
+
+}

@@ -1,0 +1,19 @@
+
+
+/*ARRANCA DESDE EL MINIMO 0PX DE ANCHO HASTA EL MAXIMO DE 800PX DE ANCHO*/
+@media (min-width: 0px) and (max-width: 800px){ 
+    
+   
+    #flex-splide {
+        flex-direction: column;
+    }
+
+    #flex-splide .flex-splide-tamanio-uno {
+        width: 100%;
+    }
+    
+    #flex-splide .flex-splide-tamanio-dos {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}

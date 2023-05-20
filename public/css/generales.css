@@ -1,0 +1,183 @@
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 16px; /*1.6rem*/
+    line-height: 1.5;
+    font-family: var(--fuentePrincipal);
+}
+
+.espacio-abajo {
+  margin-bottom: 1rem;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.espacio-section {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.espacio-section-arriba {
+    margin-top: 6rem;
+}
+
+.espacio-section-abajo {
+    margin-bottom: 6rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a { text-decoration: none;}
+
+
+/*ESTILOS CAMPOS VACIOS REQUERIDOS*/
+.error-registro-usuario {
+    background-color: var(--colorGeneral);
+    padding: .3rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.texto-blanco {
+    color: var(--blanco);
+}
+
+.texto-boton-general {
+    color: var(--colorGeneral);
+}
+
+/*ESTILOS BOTON*/
+.boton {
+    display: inline-block;
+    border: solid 2px var(--colorGeneral);
+    border-radius: 40px;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.boton:hover {
+    background-color: var(--colorGeneral);
+    color: var(--blanco);
+    transition: .3s all ease-in-out;
+}
+
+.boton-100 { width: 100%; }
+
+
+
+/*ESTILOS LABEL*/
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.caja-admin {
+    display: block;
+    width: 100%;
+    padding: 0.475rem 0.95rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid var(--colorGeneral);
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+button, input {
+    overflow: visible;
+}
+
+
+
+/*ESTILOS TABLA*/
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+    text-align: center;
+}
+
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.imagen-precia-admin{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+hr {
+    height: 5px;
+    width: 100px;
+    background-color: var(--colorGeneral);
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+
+.caja-titulo-general {
+    text-align: center;
+}
+
+.span-titulo-general {
+ font-size: 1.2rem;
+ font-weight: 300;
+}
+
+.titulo-h2-general {
+    color: var(--colorGeneral);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.tamanio-precio {
+  font-size: 2rem;
+}
+
+
+
+

@@ -1,0 +1,37 @@
+#login .login-grilla {
+    display: grid;
+    grid-template-columns: 50% 50%;
+} 
+
+#login .fondo-mitad-login {
+    background-image: url(../../../img/home/taza-fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*manera de centar un div */
+#login .caja-formulario {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+#login .caja-grupo{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#login .caja-grupo .caja{
+    padding: 1rem 1rem;
+    width: 100%;
+}
+
+#login .boton-login {
+    border: none;
+    width: 100%;
+    margin-top: .5rem;
+}
