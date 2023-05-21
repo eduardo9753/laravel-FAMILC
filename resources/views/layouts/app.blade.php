@@ -8,11 +8,12 @@
 
     <title>FAMILC.SAC</title>
     <meta name="title" content="Familc S.A.C. | Productos Personalizados" />
+    <meta name="description"
+        content="Familc S.A.C ,familc s.a.c, familc, Tazas, Polos, Gorras, Cuadro Roca, Tazas Magicas, Botellas, Decoraciones de Productos, Diseños" />
     <meta name="keywords"
-        content="Store, Tazas, Polos, Gorras, Cuadro Roca, Tazas Magicas, Botellas, Decoraciones de Productos, Diseños" />
-    
-    <meta name="keywords"
-        content="Tienda, tazas, tazas personalizadas, tazas magicas, pagina web de tazas magicas, cuadros, cuadro roca, gorros, sublimación de tazas, Sublimaciones, retratos, diseños, Tomatodos perzonalizados, polos, polos sublimados, polos con diseños, diseños personalizados, taza magica, tazas magicas, gorros gorros, chop, chop tazas, chop de vidrio">
+        content="Familc S.A.C ,familc s.a.c, familc, Tienda, tazas, tazas personalizadas, tazas magicas, pagina web de tazas magicas, cuadros, cuadro roca, gorros, sublimación de tazas, Sublimaciones, retratos, diseños, Tomatodos perzonalizados, polos, polos sublimados, polos con diseños, diseños personalizados, taza magica, tazas magicas, gorros gorros, chop, chop tazas, chop de vidrio" />
+
+
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
