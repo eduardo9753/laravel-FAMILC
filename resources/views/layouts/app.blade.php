@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>FAMILC.SAC</title>
-
-    {{-- GOOGLE FONT --}}
+    <meta name="title" content="Familc S.A.C. | Productos Personalizados" />
+    <meta name="keywords"
+        content="Store, Tazas, Polos, Gorras, Cuadro Roca, Tazas Magicas, Botellas, Decoraciones de Productos, Diseños" />
+    
+    <meta name="keywords"
+        content="Tienda, tazas, tazas personalizadas, tazas magicas, pagina web de tazas magicas, cuadros, cuadro roca, gorros, sublimación de tazas, Sublimaciones, retratos, diseños, Tomatodos perzonalizados, polos, polos sublimados, polos con diseños, diseños personalizados, taza magica, tazas magicas, gorros gorros, chop, chop tazas, chop de vidrio">
+    <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,30 +21,29 @@
         rel="stylesheet">
 
 
-    {{-- BOX ICONS --}}
+    <!-- BOX ICONS -->
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Hello, Boxicons!</title>
 
-    {{-- DATATABLES CSS --}}
-    <link rel="stylesheet" href="{{ asset('tables/dataTables.css') }}">
-    <link rel="stylesheet" href="{{ asset('tables/dataTables.min.css') }}">
+    <!-- DATATABLES CSS -->
+    <link rel="stylesheet" href="{{ asset('datatable/dataTables.css') }}">
+    <link rel="stylesheet" href="{{ asset('datatable/dataTables.min.css') }}">
 
-    {{-- SPLIDE CSS --}}
+    <!-- SPLIDE CSS -->
     <link rel="stylesheet" href="{{ asset('splide/dist/css/splide.min.css') }}">
     <link rel="stylesheet" href="{{ asset('splide/dist/css/splide-core.min.css') }}">
 
-    {{-- ICONO DEL PROYECTO --}}
+    <!-- ICONO DEL PROYECTO -->
     <link rel="shortcut icon" href="{{ asset('img/logo/FAMILC.png') }}">
 
-    {{-- NORMALIZE CSS --}}
+    <!-- NORMALIZE CSS -->
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
 
-    {{-- CSS TIENDA --}}
+    <!-- CSS TIENDA -->
     <link rel="stylesheet" href="{{ asset('css/colores.css') }}">
     <link rel="stylesheet" href="{{ asset('css/generales.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    
+
     <link rel="stylesheet" href="{{ asset('css/cliente/producto/producto.css') }}">
     <link rel="stylesheet" href="{{ asset('css/cliente/producto/buscador.css') }}">
     <link rel="stylesheet" href="{{ asset('css/cliente/empresa/empresa.css') }}">
@@ -48,7 +52,7 @@
     <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
     <link rel="stylesheet" href="{{ asset('css/navAdmin.css') }}">
 
-    {{-- CSS RESPONSIVE --}}
+    <!-- CSS RESPONSIVE -->
     <link rel="stylesheet" href="{{ asset('css/responsive/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive/cliente.producto.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive/cliente.empresa.css') }}">
@@ -65,39 +69,39 @@
 
 </head>
 
-<body >
+<body>
 
-    {{-- NAVEGADORES --}}
+    <!-- NAVEGADORES -->
     @yield('navegador')
 
 
-    {{-- HEADER --}}
+    <!-- HEADER -->
     @yield('header')
 
 
-    {{-- CONTENIDO PRINCIPAL --}}
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
-        {{-- CUERPO DE LAS PAGINAS --}}
+        <!-- CUERPO DE LAS PAGINAS -->
         @yield('contenido')
     </main>
 
 
-    {{-- FOOTER --}}
+    <!-- FOOTER -->
     @yield('footer')
 
-    {{-- JS QUERY --}}
+    <!-- JS QUERY -->
     <script src="https://code.jquery.com/jquery-3.6.4.slim.js"
         integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
 
-    {{-- DATATABLES JS --}}
+    <!-- DATATABLES JS -->
     <script src="{{ asset('datatable/dataTables.js') }}"></script>
     <script src="{{ asset('datatable/dataTables.min.js') }}"></script>
 
 
-    {{-- SPLIDE JS --}}
+    <!-- SPLIDE JS -->
     <script src="{{ asset('splide/dist/js/splide.min.js') }}"></script>
 
-    {{-- SCRIPT --}}
+    <!-- SCRIPT -->
     <script src="{{ asset('js/cargarImagenUno.js') }}"></script>
     <script src="{{ asset('js/cargarImagenDos.js') }}"></script>
     <script src="{{ asset('js/cargarImagenTres.js') }}"></script>

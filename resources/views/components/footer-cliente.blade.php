@@ -99,7 +99,8 @@
                                     <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a href="">facebook</a></p>
+                            <p class="footer-parafo"><a
+                                    href="https://www.facebook.com/profile.php?id=100092600122502">facebook</a></p>
                         </div>
 
                         <div class="footer-flex">
@@ -114,20 +115,20 @@
                                     <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a href="">instagram</a></p>
+                            <p class="footer-parafo"><a href="https://www.instagram.com/familc.sac/">instagram</a></p>
                         </div>
 
                         <div class="footer-flex">
                             <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube"
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tiktok"
                                     width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <rect x="3" y="5" width="18" height="14" rx="4" />
-                                    <path d="M10 9l5 3l-5 3z" />
+                                    <path
+                                        d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a href="">youtube</a></p>
+                            <p class="footer-parafo"><a href="">TikTok</a></p>
                         </div>
                     </div>
 

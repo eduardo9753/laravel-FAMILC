@@ -36,7 +36,7 @@
 
         <div class="producto-grilla">
             <div class="producto-grilla-uno">
-                <a href="{{ route('product.index', ['category' => 2]) }}">
+                <a href="{{ route('product.index', ['category' => 7]) }}">
                     <div class="producto-caja-relative">
                         <img src="{{ asset('img/home/taza-producto.jpg') }}" alt="Producto Tazas">
 
@@ -48,7 +48,7 @@
             </div>
 
             <div class="producto-grilla-dos">
-                <a href="{{ route('product.index', ['category' => 1]) }}">
+                <a href="{{ route('product.index', ['category' => 6]) }}">
                     <div class="producto-caja-relative">
                         <img src="{{ asset('img/home/polo-producto.jpg') }}" alt="Producto Polos">
 
@@ -58,7 +58,7 @@
                     </div>
                 </a>
 
-                <a href="{{ route('product.index', ['category' => 4]) }}">
+                <a href="{{ route('product.index', ['category' => 9]) }}">
                     <div class="producto-caja-relative">
                         <img src="{{ asset('img/home/botella-producto.jpg') }}" alt="Producto Botellas">
 
@@ -68,7 +68,7 @@
                     </div>
                 </a>
 
-                <a href="{{ route('product.index', ['category' => 3]) }}">
+                <a href="{{ route('product.index', ['category' => 8]) }}">
                     <div class="producto-caja-relative">
                         <img src="{{ asset('img/home/cuadro-producto.jpg') }}" alt="Producto Cuadros">
 
@@ -78,7 +78,7 @@
                     </div>
                 </a>
 
-                <a href="{{ route('product.index', ['category' => 5]) }}">
+                <a href="{{ route('product.index', ['category' => 10]) }}">
                     <div class="producto-caja-relative">
                         <img src="{{ asset('img/home/gorro-producto.jpg') }}" alt="Producto Gorros">
 
