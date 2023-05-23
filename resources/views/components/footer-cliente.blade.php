@@ -99,7 +99,7 @@
                                     <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a
+                            <p class="footer-parafo"><a target="_blank"
                                     href="https://www.facebook.com/profile.php?id=100092600122502">facebook</a></p>
                         </div>
 
@@ -115,7 +115,8 @@
                                     <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a href="https://www.instagram.com/familc.sac/">instagram</a></p>
+                            <p class="footer-parafo"><a target="_blank"
+                                    href="https://www.instagram.com/familc.sac/">instagram</a></p>
                         </div>
 
                         <div class="footer-flex">
@@ -128,7 +129,8 @@
                                         d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a href="">TikTok</a></p>
+                            <p class="footer-parafo"><a target="_blank"
+                                    href="https://www.tiktok.com/@familcsac?lang=es">TikTok</a></p>
                         </div>
                     </div>
 

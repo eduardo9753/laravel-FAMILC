@@ -79,6 +79,20 @@
     #footer .footer-grilla {
         grid-template-columns: repeat(1,1fr);
     }
+    
+  
+    /*ESTILOS LOGIN*/
+    #login .login-grilla {
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+
+    #login .fondo-mitad-login {
+        height: 30vh;
+    }
+
+    #login .caja-formulario {
+        height: 65vh !important;
+    }
 }
 
 

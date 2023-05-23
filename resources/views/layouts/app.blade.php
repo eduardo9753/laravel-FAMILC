@@ -3,15 +3,16 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>FAMILC.SAC</title>
-    <meta name="title" content="Familc S.A.C. | Productos Personalizados" />
-    <meta name="description"
-        content="Familc S.A.C ,familc s.a.c, familc, Tazas, Polos, Gorras, Cuadro Roca, Tazas Magicas, Botellas, Decoraciones de Productos, Diseños" />
-    <meta name="keywords"
-        content="Familc S.A.C ,familc s.a.c, familc, Tienda, tazas, tazas personalizadas, tazas magicas, pagina web de tazas magicas, cuadros, cuadro roca, gorros, sublimación de tazas, Sublimaciones, retratos, diseños, Tomatodos perzonalizados, polos, polos sublimados, polos con diseños, diseños personalizados, taza magica, tazas magicas, gorros gorros, chop, chop tazas, chop de vidrio" />
 
+    <meta name="keywords"
+        content="tazas, TAZAS, tazas porsonalizadas, TAZAS PERSONALIZADAS, cuadros, CUADROS, cuadro, CUADRO, polos, polos sublimados, polos perzonalizados, polos estampados, sublimacion de tazas, diseños, gorros, botellas, tomatodos, logos, regalos, perzonalizados, tazas con fotos, tazas sublimadas, cuadros con fotos, cuadros sublimados, FAMILC, FAMILC SAC , familc, familc sac">
+    <meta name="description"
+        content="Tienda de productos personalizados, aqui encontraras distintos tipos de productos diseñados y podras tambien tu fotografias para retratarlos en los siguientes productos  - Tazas , Polos , Cuadro Roca , Tazas Chop">
+
+    <title>FAMILC.SAC</title>
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +35,7 @@
     <link rel="stylesheet" href="{{ asset('splide/dist/css/splide-core.min.css') }}">
 
     <!-- ICONO DEL PROYECTO -->
-    <link rel="shortcut icon" href="{{ asset('img/logo/FAMILC.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('img/logo/FAMILC.png') }}">
 
     <!-- NORMALIZE CSS -->
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
