@@ -3,9 +3,8 @@
 
 
 {{-- NAVEGADOR DE LAS PAGINAS --}}
-@section('navegador')
-    <x-navegador-cliente />
-@endsection
+<x-navegador-cliente />
+
 
 
 

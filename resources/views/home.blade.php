@@ -2,8 +2,10 @@
 
 
 
-<!---NAVEGADOR DE LAS PAGINAS -->
+{{-- NAVEGADOR DE LAS PAGINAS --}}
 <x-navegador-cliente />
+
+
 
 
 
