@@ -3,7 +3,10 @@
 
 
 {{-- NAVEGADOR DE LAS PAGINAS --}}
-<x-navegador-cliente />
+@section('navegador')
+    <x-navegador-cliente />
+@endsection
+
 
 
 

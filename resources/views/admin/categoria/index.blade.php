@@ -3,7 +3,9 @@
 
 
 {{-- NAVEGADOR DE LAS PAGINAS --}}
-<x-navegador-admin />
+@section('navegador')
+    <x-navegador-admin />
+@endsection
 
 
 

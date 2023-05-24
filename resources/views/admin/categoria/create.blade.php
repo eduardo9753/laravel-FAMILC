@@ -3,8 +3,9 @@
 
 
 {{-- NAVEGADOR DE LAS PAGINAS --}}
-<x-navegador-admin />
-
+@section('navegador')
+    <x-navegador-admin />
+@endsection
 
 
 
@@ -22,7 +23,7 @@
 
                     <div class="caja-grupo">
                         <label for="nombre" class="">Nombre de la categoria</label>
-                        <input type="nombre" id="nombre" name="nombre" class="caja-admin espacio-abajo" 
+                        <input type="nombre" id="nombre" name="nombre" class="caja-admin espacio-abajo"
                             placeholder="Categoria" autocomplete="off" value="{{ old('nombre') }}">
                         {{-- VALIDACION CON VALIDATE --}}
                         @error('nombre')
