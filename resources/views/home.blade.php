@@ -2,13 +2,13 @@
 
 
 
-{{-- NAVEGADOR DE LAS PAGINAS --}}
+<!---NAVEGADOR DE LAS PAGINAS -->
 <x-navegador-cliente />
 
 
 
 
-{{-- HEADER --}}
+<!---HEADER -->
 @section('header')
     <header id="header">
         <video muted autoplay loop>
@@ -25,7 +25,7 @@
 
 
 
-{{-- CONTENIDO --}}
+<!--CONTENIDO -->
 @section('contenido')
     <section id="producto" class="espacio-section contenedor">
         <div class="caja-titulo-general">
@@ -159,5 +159,5 @@
 
 
 
-{{-- FOOTER --}}
+<!--FOOTER -->
 <x-footer-cliente />

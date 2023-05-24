@@ -84,7 +84,7 @@ class ProductController extends Controller
             $imagenServidor = Image::make($imagen_uno); //CREANDO LA IMAGEN CON Intervation
             $imagenServidor->fit(400, 400);       //DANDOLE TAMAÑO UNICO
 
-            $imagen_path_uno = public_path('tazas') . "/" . $nombreImagen_uno; //DIRECCIONANDO A LA RUTA
+            $imagen_path_uno = 'tazas' . "/" . $nombreImagen_uno; //DIRECCIONANDO A LA RUTA
             $imagenServidor->save($imagen_path_uno);      //GUARDANDO IMAGEN
         }
 
@@ -96,7 +96,7 @@ class ProductController extends Controller
             $imagenServidor = Image::make($imagen_dos); //CREANDO LA IMAGEN CON Intervation
             $imagenServidor->fit(400, 400);       //DANDOLE TAMAÑO UNICO
 
-            $imagen_path_dos = public_path('tazas') . "/" . $nombreImagen_dos; //DIRECCIONANDO A LA RUTA
+            $imagen_path_dos = 'tazas' . "/" . $nombreImagen_dos; //DIRECCIONANDO A LA RUTA
             $imagenServidor->save($imagen_path_dos);      //GUARDANDO IMAGEN
         }
 
@@ -108,7 +108,7 @@ class ProductController extends Controller
             $imagenServidor = Image::make($imagen_tres); //CREANDO LA IMAGEN CON Intervation
             $imagenServidor->fit(400, 400);       //DANDOLE TAMAÑO UNICO
 
-            $imagen_path_tres = public_path('tazas') . "/" . $nombreImagen_tres; //DIRECCIONANDO A LA RUTA
+            $imagen_path_tres = 'tazas' . "/" . $nombreImagen_tres; //DIRECCIONANDO A LA RUTA
             $imagenServidor->save($imagen_path_tres);      //GUARDANDO IMAGEN
         }
 
