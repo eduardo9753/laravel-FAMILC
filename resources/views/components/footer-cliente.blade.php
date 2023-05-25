@@ -18,7 +18,7 @@
                                     <path d="M15 8l4 4" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a href="">Categoria de Tazas</a></p>
+                            <p class="footer-parafo"><a href="{{ route('product.index', ['category' => 7]) }}">Categoria de Tazas</a></p>
                         </div>
 
                         <div class="footer-flex">
@@ -33,7 +33,7 @@
                                     <path d="M15 8l4 4" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a href="">Categoria de Polos</a></p>
+                            <p class="footer-parafo"><a href="{{ route('product.index', ['category' => 6]) }}">Categoria de Polos</a></p>
                         </div>
 
                         <div class="footer-flex">
@@ -48,7 +48,7 @@
                                     <path d="M15 8l4 4" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a href="">Categoria de Botellas</a></p>
+                            <p class="footer-parafo"><a href="{{ route('product.index', ['category' => 9]) }}">Categoria de Botellas</a></p>
                         </div>
 
                         <div class="footer-flex">
@@ -63,7 +63,7 @@
                                     <path d="M15 8l4 4" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a href="">Categoria de Cuadros</a></p>
+                            <p class="footer-parafo"><a href="{{ route('product.index', ['category' => 8]) }}">Categoria de Cuadros</a></p>
                         </div>
 
                         <div class="footer-flex">
@@ -78,7 +78,7 @@
                                     <path d="M15 8l4 4" />
                                 </svg>
                             </div>
-                            <p class="footer-parafo"><a href="">Categoria de Gorros</a></p>
+                            <p class="footer-parafo"><a href="{{ route('product.index', ['category' => 10]) }}">Categoria de Chop</a></p>
                         </div>
                     </div>
 

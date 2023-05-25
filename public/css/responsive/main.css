@@ -4,13 +4,17 @@
     
     /*estilos header*/
     #header {
-        min-height: 40vh;
+       height: 40vh;
     }
 
-    #header .parrafo-header {
-        margin-top: 130px;
-        font-size: 1rem; 
+    #header .titulo-header {
+        font-size: 2rem;
     }
+
+    #header .header-descripcion {
+        height: 50%;
+    }
+   
 
     /*responsive producto*/
     .titulo-h2-general {
@@ -103,7 +107,7 @@
     
     /*estilos header*/
     #header {
-        min-height: 40vh;
+        height: 40vh;
     }
 
     #header .parrafo-header {

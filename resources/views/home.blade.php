@@ -13,15 +13,17 @@
 <!---HEADER -->
 @section('header')
     <header id="header">
-        <video muted autoplay loop>
+        {{--<video muted autoplay loop>
             <source src="{{ asset('video/taza-video.mp4') }}" type="video/mp4">
-        </video>
+        </video>--}}
 
         <div class="header-descripcion">
-            <p class="parrafo-header">tazas personalizadas</p>
-            <h1 class="titulo-header">FAMILC</span></h1>
+            <h1 class="titulo-header">FAMILC S.A.C</span></h1>
         </div>
     </header>
+    <div id="header-footer">
+        <p class="parrafo-header">tazas personalizadas</p>
+    </div>
 @endsection
 
 
@@ -82,10 +84,10 @@
 
                 <a href="{{ route('product.index', ['category' => 10]) }}">
                     <div class="producto-caja-relative">
-                        <img src="{{ asset('img/home/gorro-producto.jpg') }}" alt="Producto Gorros">
+                        <img src="{{ asset('img/home/chop-producto.jpg') }}" alt="Producto Gorros">
 
                         <div class="producto-descripcion">
-                            <p>Gorros</p>
+                            <p>Chop</p>
                         </div>
                     </div>
                 </a>
