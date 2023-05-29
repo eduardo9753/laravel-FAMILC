@@ -37,6 +37,8 @@
                     </div>
                     <div>
                         <h3 class="contacto-titulo">Celulares</h3>
+                        <p class="contacto-parrafo">+51 952 955 205</p>
+                        <p class="contacto-parrafo">+51 995 119 655</p>
                         <p class="contacto-parrafo">+51 922 394 642</p>
                     </div>
                     <div>

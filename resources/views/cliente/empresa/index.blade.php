@@ -32,24 +32,22 @@
                 <div class="empresa-caja-dos">
                     <div>
                         <h3 class="empresa-titulo">La empresa</h3>
-                        <p class="empresa-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-                            impedit beatae accusamus eum
-                            delectus fugit placeat dolorum laboriosam facilis ab nemo sit dicta odio corrupti totam ducimus
-                            minus. </p>
+                        <p class="empresa-parrafo">Somos FAMILC S.A.C . un emprendimiento que realiza todo tipo de
+                            personalización en polos, tazas, toma todos, foto rocas, poza vasos, chop y otros productos,
+                            realizamos la producción con la técnica de sublimación, contamos con un equipo de alta calidad
+                            para que los diseños sean
+                            nítidos y full color 🎁</p>
                     </div>
                     <div>
                         <h3 class="empresa-titulo">Mision</h3>
-                        <p class="empresa-parrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos
-                            voluptate facere ipsam
-                            officia rem? Ducimus consequatur debitis exercitationem voluptatem ratione iusto distinctio ex
-                            numquam minus quisquam eos ea.</p>
+                        <p class="empresa-parrafo">Proporcionar a los clientes nuestros productos con la mejor calidad y
+                            precios accesibles,
+                            manteniendo el profesionalismo y la preferencia de nuestros clientes.</p>
                     </div>
                     <div>
                         <h3 class="empresa-titulo">Vision</h3>
-                        <p class="empresa-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                            veritatis corporis vel quos,
-                            iure fugit esse quae similique sed necessitatibus quasi, expedita architecto commodi id dolores
-                            tempora harum tenetur sit .</p>
+                        <p class="empresa-parrafo">Ampliar nuestra cartera de clientes brindando productos sublimados a
+                            través de procesos de alta calidad humana.</p>
                     </div>
                 </div>
 
