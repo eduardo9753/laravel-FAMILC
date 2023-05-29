@@ -146,9 +146,9 @@
 
 #tazas .taza .taza-color-mitad{
     position: absolute;
-    top: 0;
-    height: 300px;
-    width: 50%;
+    bottom: 0;  /*top: 0*/
+    height: 150px;  /*height: 300px*/
+    width: 100%;    /*width: 50%*/
     background: var(--colorGeneralTransparente);
 }
 
