@@ -1,64 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# FAMILC 
+FAMILC empresa dedicada a la venta de productos personalizados: tazas, cuadros , polos , chop y gorros con sublimación de alta calidad
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Construida en laravel 8,  CSS3 y Base de Datos MySql.
 
-## About Laravel
+- [Visita Nuestra Pagina - FAMILC](https://familc.com/).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+HERRAMIENTAS :
+- Base de Datos: MySQL.
+- Estilos: CSS3 y Tailwind CSS.
+- Lenguaje : Lenguaje PHP - FRAMEWORK LARAVEL.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. Menu
+![1](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/6f177c18-01ec-43b3-a445-2dee596d3f14)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2. Lista de Productos
+![2](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/73e02598-b9ee-4e3d-ad92-a8c2f66d473b)
 
-## Learning Laravel
+3. Lista de imagenes de Productos
+![3](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/28e24f5a-4f4b-43ac-b557-1e12238ffaec)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. Lista de Categorias
+![4](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/5d9e1ab2-bc92-45da-9f8a-1dfac41d3069)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+5. Login
+![5](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/5580cf5b-5d6b-406e-b2ef-970c755d9780)
 
-## Laravel Sponsors
+6. Header
+![c-1](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/0634921a-e3cf-4df1-a986-95b1fda6f3cb)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+7. Productos
+![c-2](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/dbce414d-3ba2-4de6-896d-63734db8a84d)
 
-### Premium Partners
+8. Diseños Aleatorios
+![c-3](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/d5d109a5-2c14-47fb-b3d7-fd268a87e898)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+9. Slogan
+![c-4](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/3c8a8517-4fbf-4c84-b947-3f3231cc6f57)
 
-## Contributing
+10. La empresa
+![c-5](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/be12cc33-5a7d-4120-8adb-937fc31b6352)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+11. Footer
+![c-6](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/e16e0348-0d10-43dc-a675-394283a46250)
 
-## Code of Conduct
+12. Vista del Producto
+![c-7](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/79d36897-3e00-4437-94d0-f642f08b26ee)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+13. Filtro de Productos
+![c-8](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/ce95c28f-85ce-4b00-8773-273d5a55ddfb)
 
-## Security Vulnerabilities
+14. Galeria
+![c-9](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/151dcb1d-c674-4484-9613-6e2aac816b5e)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+15. Contactos
+![c-10](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/faa35b13-d377-41e7-aaa5-6330d9f091bb)
 
-## License
+16.Ubicación
+![c-11](https://github.com/eduardo9753/Laravel-MiAgroPeru/assets/68178186/e8fe0f19-10f0-4a69-ab99-575ee714550c)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+
