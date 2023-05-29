@@ -35,7 +35,6 @@ class ProductControllerClient extends Controller
     {
         //echo "id: " . $product->id;
         $slug = $product->nombre;
-        $codigo = $product->id;
 
         //CUANDO ES UN GET TE RETORNA UNA COLECCION DE DATOS
         //ENTONCES TIENES QUE RECORRER ESOS DATOS POR MEDIO DE UN BUBLEW FOREACH()
@@ -71,7 +70,6 @@ class ProductControllerClient extends Controller
             'product' => $product,
             'aleatorios' => $aleatorios,
             'slug' => $slug,
-            'codigo' => $codigo
         ]);
     }
 

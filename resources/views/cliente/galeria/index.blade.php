@@ -23,10 +23,83 @@
 
 {{-- CONTENIDO --}}
 @section('contenido')
+    <!--  OWLCOURRESL Demos -->
+    <section id="demos">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-1.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-2.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-3.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-4.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-5.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-6.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-7.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-8.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-9.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-10.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-11.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/galeria/galeria-12.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- <a class="boton secondary play">Play</a>
+                    <a class="boton secondary stop">Stop</a>-->
+            </div>
+        </div>
+    </section>
+    <!--OWLCOURRESL-->
+
     <section id="galeria" class="espacio-section">
         <div class="contenedor">
             <div class="galeria-grid">
-                
+
                 <div>
                     <img src="{{ asset('img/galeria/galeria-1.jpeg') }}" alt="">
                 </div>

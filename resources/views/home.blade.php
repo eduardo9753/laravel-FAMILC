@@ -13,17 +13,90 @@
 <!---HEADER -->
 @section('header')
     <header id="header">
-        {{--<video muted autoplay loop>
+        {{-- <video muted autoplay loop>
             <source src="{{ asset('video/taza-video.mp4') }}" type="video/mp4">
-        </video>--}}
+        </video> --}}
 
         <div class="header-descripcion">
             <h1 class="titulo-header">FAMILC S.A.C</span></h1>
         </div>
     </header>
     <div id="header-footer">
-        <p class="parrafo-header">tazas personalizadas</p>
+        <p class="parrafo-header">Productos personalizadas</p>
     </div>
+
+    <!--  OWLCOURRESL Demos -->
+    <section id="demos">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-1.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-2.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-3.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-4.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-5.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-6.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-7.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-8.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-9.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-10.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-11.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ asset('img/eventos/galeria-12.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- <a class="boton secondary play">Play</a>
+                        <a class="boton secondary stop">Stop</a>-->
+            </div>
+        </div>
+    </section>
+    <!--OWLCOURRESL-->
 @endsection
 
 

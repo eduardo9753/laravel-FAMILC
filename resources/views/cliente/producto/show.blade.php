@@ -47,8 +47,8 @@
                     <p class="flex-splide-precio ">S/. {{ $product->precio }}</p>
 
                     <a target="_blank"
-                        href="https://wa.me/51922394642?text=Quisiera mas informacion del producto - Codigo:{{ $codigo }}"
-                        class="boton texto-boton-general ">Preguntar</a>
+                        href="https://wa.me/51952955205?text=Quisiera más información del producto - Codigo:{{ $product->codigo }} - {{ $product->descripcion }}"
+                        class="boton texto-boton-general ">Saber más</a>
                 </div>
             </div>
         </div>

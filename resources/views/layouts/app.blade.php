@@ -12,7 +12,7 @@
     <meta name="description"
         content="Tienda de productos personalizados, aqui encontraras distintos tipos de productos diseñados y podras tambien tu fotografias para retratarlos en los siguientes productos  - Tazas , Polos , Cuadro Roca , Tazas Chop">
 
-    <title>FAMILC.SAC</title>
+    <title>FAMILC S.A.C</title>
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +25,10 @@
     <!-- BOX ICONS -->
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="{{ asset('owl/dist/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('owl/dist/assets/owl.theme.default.min.css') }}">
 
     <!-- DATATABLES CSS -->
     <link rel="stylesheet" href="{{ asset('datatable/dataTables.css') }}">
@@ -94,20 +98,28 @@
     <script src="https://code.jquery.com/jquery-3.6.4.slim.js"
         integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
 
+    <!-- javascript OWL CAROUSEL -->
+    <script src="{{ asset('owl/dist/owl.carousel.js') }}"></script>
+    <script src="{{ asset('owl/dist/owl.carousel.min.js') }}"></script>
+
+
     <!-- DATATABLES JS -->
     <script src="{{ asset('datatable/dataTables.js') }}"></script>
     <script src="{{ asset('datatable/dataTables.min.js') }}"></script>
+
 
 
     <!-- SPLIDE JS -->
     <script src="{{ asset('splide/dist/js/splide.min.js') }}"></script>
 
     <!-- SCRIPT -->
+    <script src="{{ asset('js/splide.js') }}"></script>
+    <script src="{{ asset('js/owl.js') }}"></script>
     <script src="{{ asset('js/cargarImagenUno.js') }}"></script>
     <script src="{{ asset('js/cargarImagenDos.js') }}"></script>
     <script src="{{ asset('js/cargarImagenTres.js') }}"></script>
     <script src="{{ asset('js/dataTables.js') }}"></script>
-    <script src="{{ asset('js/splide.js') }}"></script>
+
 
 
 </body>
