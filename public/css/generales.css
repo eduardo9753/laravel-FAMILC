@@ -18,10 +18,13 @@ body {
   margin-bottom: 1rem;
 }
 
-img {
+img , video {
     width: 100%;
     object-fit: cover;
 }
+
+
+.tamanio-video { width: 380px; height: 250px;}
 
 .contenedor {
     width: 90%;

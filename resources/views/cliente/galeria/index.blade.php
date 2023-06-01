@@ -101,6 +101,24 @@
             <div class="galeria-grid">
 
                 <div>
+                    <video muted autoplay loop class="tamanio-video">
+                        <source src="{{ asset('video/taza-video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+
+                <div>
+                    <video muted autoplay loop class="tamanio-video">
+                        <source src="{{ asset('video/taza-papa-video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+
+                <div>
+                    <video muted autoplay loop class="tamanio-video">
+                        <source src="{{ asset('video/roca-video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+
+                <div>
                     <img src="{{ asset('img/galeria/galeria-1.jpeg') }}" alt="">
                 </div>
 

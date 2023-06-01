@@ -113,12 +113,12 @@
 
         <div class="producto-grilla">
             <div class="producto-grilla-uno">
-                <a href="{{ route('product.index', ['category' => 7]) }}">
+                <a href="{{ route('product.index', ['category' => 8]) }}">
                     <div class="producto-caja-relative">
-                        <img src="{{ asset('img/home/taza-producto.jpg') }}" alt="Producto Tazas">
+                        <img src="{{ asset('img/home/cuadro-producto.jpg') }}" alt="Producto Cuadros">
 
                         <div class="producto-descripcion">
-                            <p>Tazas</p>
+                            <p>Cuadros</p>
                         </div>
                     </div>
                 </a>
@@ -145,15 +145,17 @@
                     </div>
                 </a>
 
-                <a href="{{ route('product.index', ['category' => 8]) }}">
+                <a href="{{ route('product.index', ['category' => 7]) }}">
                     <div class="producto-caja-relative">
-                        <img src="{{ asset('img/home/cuadro-producto.jpg') }}" alt="Producto Cuadros">
+                        <img src="{{ asset('img/home/taza-producto.jpg') }}" alt="Producto Tazas">
 
                         <div class="producto-descripcion">
-                            <p>Cuadros</p>
+                            <p>Tazas</p>
                         </div>
                     </div>
                 </a>
+
+               
 
                 <a href="{{ route('product.index', ['category' => 10]) }}">
                     <div class="producto-caja-relative">
