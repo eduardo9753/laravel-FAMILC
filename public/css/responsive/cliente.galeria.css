@@ -5,4 +5,10 @@
     #galeria .galeria-grid {
         grid-template-columns: repeat(1,1fr);
     }
+
+    #galeria .galeria-grid .tamanio-video {
+        width: 100%;
+        height: 250px;
+    }
+
 }
