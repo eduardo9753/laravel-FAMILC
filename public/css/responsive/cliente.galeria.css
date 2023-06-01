@@ -6,7 +6,7 @@
         grid-template-columns: repeat(1,1fr);
     }
 
-    #galeria .galeria-grid video {
+    #galeria .galeria-grid source {
         width: 100%;
         height: 250px;
     }
