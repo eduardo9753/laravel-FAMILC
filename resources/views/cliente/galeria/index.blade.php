@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <!-- <a class="boton secondary play">Play</a>
-                    <a class="boton secondary stop">Stop</a>-->
+                        <a class="boton secondary stop">Stop</a>-->
             </div>
         </div>
     </section>
@@ -101,19 +101,19 @@
             <div class="galeria-grid">
 
                 <div>
-                    <video muted autoplay loop class="tamanio-video">
+                    <video muted autoplay loop>
                         <source src="{{ asset('video/taza-video.mp4') }}" type="video/mp4">
                     </video>
                 </div>
 
                 <div>
-                    <video muted autoplay loop class="tamanio-video">
+                    <video muted autoplay loop>
                         <source src="{{ asset('video/taza-papa-video.mp4') }}" type="video/mp4">
                     </video>
                 </div>
 
                 <div>
-                    <video muted autoplay loop class="tamanio-video">
+                    <video muted autoplay loop>
                         <source src="{{ asset('video/roca-video.mp4') }}" type="video/mp4">
                     </video>
                 </div>

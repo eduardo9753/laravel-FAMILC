@@ -23,9 +23,6 @@ img , video ,source{
     object-fit: cover;
 }
 
-
-.tamanio-video { width: 380px; height: 250px;}
-
 .contenedor {
     width: 90%;
     max-width: 1400px;
