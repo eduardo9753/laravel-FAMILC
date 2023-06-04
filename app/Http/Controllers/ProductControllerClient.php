@@ -23,7 +23,7 @@ class ProductControllerClient extends Controller
                 'photos.foto_uno',
                 'photos.foto_dos',
                 'photos.foto_tres'               //VARIABLE QUE ESTA EN EL HOME [1-5]
-            )->where('products.category_id', '=', $request->category)->paginate(9);
+            )->where('products.category_id', '=', $request->category)->orderBy('products.id','desc')->paginate(9);
         //dd($product);
         return view('cliente.producto.index', [
             'product' => $product
@@ -90,7 +90,7 @@ class ProductControllerClient extends Controller
                 'photos.foto_uno',
                 'photos.foto_dos',
                 'photos.foto_tres'           //LE PASAMOS EL ID DEL FORMULARIO DE BUSQUEDA
-            )->where('products.category_id', '=', $request->categoria)->paginate(9);
+            )->where('products.category_id', '=', $request->categoria)->orderBy('products.id','desc')->paginate(9);
 
         return view('cliente.producto.search' , [
             'product' => $product,
