@@ -28,7 +28,7 @@
 
             <div class="buscador">
                 {{-- YA QUE SOLO VMOS A DEVOLVER UNA VISTA CON DATOS --}}
-                <form action="" method="GET">
+                <form action="{{ route('busqueda.search') }}" method="GET">
                     <div class="flex-buscador">
                         <div class="caja-grupo">
                             <label for="categoria" class="">Seleccione la categoria</label>
@@ -40,7 +40,7 @@
                         </div>
 
                         <div>
-                            <button type="submit" name="btn-login" id="" class="boton boton-login">
+                            <button type="submit" class="boton boton-login">
                                 Buscar Producto
                             </button>
                         </div>
@@ -50,7 +50,7 @@
 
             <div class="taza-grid">
 
-                @foreach ($product as $product)
+                @foreach ($products as $product)
                     <div class="taza">
                         <div class="taza-img">
                             <a href="{{ route('product.show', ['product' => $product]) }}">
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                 @endforeach
-
+                {{ $products->withQueryString()->links()}}
             </div>
         </div>
     </section>

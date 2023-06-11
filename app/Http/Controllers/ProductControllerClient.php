@@ -13,7 +13,7 @@ class ProductControllerClient extends Controller
     public function index(Request $request)
     {
         //LO RECORRIMOS CON UN FOREACH EN LA VISTA
-        $product = Product::join('photos', 'photos.product_id', '=', 'products.id')
+        $products = Product::join('photos', 'photos.product_id', '=', 'products.id')
             ->select(
                 'products.id',
                 'products.descripcion',
@@ -23,10 +23,10 @@ class ProductControllerClient extends Controller
                 'photos.foto_uno',
                 'photos.foto_dos',
                 'photos.foto_tres'               //VARIABLE QUE ESTA EN EL HOME [1-5]
-            )->where('products.category_id', '=', $request->category)->orderBy('products.id','desc')->paginate(9);
+            )->where('products.category_id', '=', $request->category)->orderBy('products.id','desc')->simplePaginate(9);
         //dd($product);
         return view('cliente.producto.index', [
-            'product' => $product
+            'products' => $products
         ]);
     }
 
@@ -80,7 +80,7 @@ class ProductControllerClient extends Controller
         $category = Category::all();
 
         //LO RECORRIMOS CON UN FOREACH EN LA VISTA
-        $product = Product::join('photos', 'photos.product_id', '=', 'products.id')
+        $products = Product::join('photos', 'photos.product_id', '=', 'products.id')
             ->select(
                 'products.id',
                 'products.descripcion',
@@ -90,10 +90,10 @@ class ProductControllerClient extends Controller
                 'photos.foto_uno',
                 'photos.foto_dos',
                 'photos.foto_tres'           //LE PASAMOS EL ID DEL FORMULARIO DE BUSQUEDA
-            )->where('products.category_id', '=', $request->categoria)->orderBy('products.id','desc')->paginate(9);
+            )->where('products.category_id', '=', $request->categoria)->orderBy('products.id','desc')->simplePaginate(6);
 
         return view('cliente.producto.search' , [
-            'product' => $product,
+            'products' => $products,
             'category' => $category
         ]);
     }

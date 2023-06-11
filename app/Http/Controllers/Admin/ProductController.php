@@ -171,6 +171,5 @@ class ProductController extends Controller
 
         //RETORNAMOS LA VISTA CON LA TABLA DE DATOS
         return redirect()->route('admin.product.index');
-
     }
 }

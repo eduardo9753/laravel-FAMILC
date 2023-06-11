@@ -26,7 +26,7 @@
         <div class="contenedor">
             <div class="taza-grid">
 
-                @foreach ($product as $product)
+                @foreach ($products as $product)
                     <div class="taza">
                         <div class="taza-img">
                             <a href="{{ route('product.show', ['product' => $product]) }}">
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 @endforeach
-
+                {{ $products->withQueryString()->links()}}
             </div>
         </div>
     </section>
