@@ -18,7 +18,7 @@
         </video> --}}
 
         <div class="header-descripcion">
-            <h1 class="titulo-header">FAMILC S.A.C</span></h1>
+            <h1 class="titulo-header">FAMILC</span></h1>
         </div>
     </header>
     <div id="header-footer">

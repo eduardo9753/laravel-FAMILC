@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 
@@ -12,7 +11,7 @@
     <meta name="description"
         content="Tienda de productos personalizados, aqui encontraras distintos tipos de productos diseñados y podras tambien tu fotografias para retratarlos en los siguientes productos  - Tazas , Polos , Cuadro Roca , Tazas Chop">
 
-    <title>FAMILC S.A.C</title>
+    <title>FAMILC | Creaciones</title>
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,7 +112,6 @@
     <script src="{{ asset('splide/dist/js/splide.min.js') }}"></script>
 
     <!-- SCRIPT -->
-    <script src="{{ asset('js/splide.js') }}"></script>
     <script src="{{ asset('js/owl.js') }}"></script>
     <script src="{{ asset('js/cargarImagenUno.js') }}"></script>
     <script src="{{ asset('js/cargarImagenDos.js') }}"></script>

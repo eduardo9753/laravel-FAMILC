@@ -13,7 +13,7 @@
 @section('header')
     <header id="header-producto">
         <div class="header-producto-descripcion">
-            <h1 class="titulo-header">FAMILC.SAC</h1>
+            <h1 class="titulo-header">FAMILC CREACIONES</h1>
         </div>
     </header>
 @endsection
@@ -32,7 +32,7 @@
                 <div class="empresa-caja-dos">
                     <div>
                         <h3 class="empresa-titulo">La empresa</h3>
-                        <p class="empresa-parrafo">Somos FAMILC S.A.C . un emprendimiento que realiza todo tipo de
+                        <p class="empresa-parrafo">Somos FAMILC Creaciones un emprendimiento que realiza todo tipo de
                             personalización en polos, tazas, toma todos, foto rocas, poza vasos, chop y otros productos,
                             realizamos la producción con la técnica de sublimación, contamos con un equipo de alta calidad
                             para que los diseños sean
