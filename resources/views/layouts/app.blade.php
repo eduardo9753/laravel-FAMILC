@@ -112,6 +112,7 @@
     <script src="{{ asset('splide/dist/js/splide.min.js') }}"></script>
 
     <!-- SCRIPT -->
+    <script src="{{ asset('js/splide.js') }}"></script>
     <script src="{{ asset('js/owl.js') }}"></script>
     <script src="{{ asset('js/cargarImagenUno.js') }}"></script>
     <script src="{{ asset('js/cargarImagenDos.js') }}"></script>
