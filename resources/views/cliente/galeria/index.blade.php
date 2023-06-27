@@ -117,7 +117,7 @@
                         <source src="{{ asset('video/roca-video.mp4') }}" type="video/mp4">
                     </video>
                 </div>
-
+                
                 <div>
                     <img src="{{ asset('img/galeria/galeria-1.jpeg') }}" alt="">
                 </div>

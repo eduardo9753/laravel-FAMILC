@@ -44,7 +44,7 @@
                 <div class="flex-splide-tamanio-dos">
                     <p class="flex-splide-nombre">{{ $product->nombre }}</p>
                     <p class="flex-splide-decripcion">{{ $product->descripcion }}</p>
-                    <p class="flex-splide-precio ">S/. {{ $product->precio }}</p>
+                    <p class="flex-splide-precio ">{{ $product->precio }}</p>
 
                     <a target="_blank"
                         href="https://wa.me/51952955205?text=Quisiera más información del producto - Codigo:{{ $product->id }} - {{ $product->descripcion }}"
