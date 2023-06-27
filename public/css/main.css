@@ -140,7 +140,6 @@
 #tazas .taza .taza-descripcion p{
     margin-top: 1rem;
     font-family: var(--fuentePrincipal);
-    text-transform: uppercase;
     margin-bottom: 1rem;
 }
 

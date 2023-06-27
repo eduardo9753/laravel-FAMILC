@@ -62,8 +62,8 @@
 
                         <div class="taza-descripcion">
                             <h2>{{ $product->nombre }}</h2>
-                            <p>{{ $product->descripcion }}</p>
-                            <p class="texto-boton-general tamanio-precio">S/. {{ $product->precio }}</p>
+                            <p class="texto-mayuscula">{{ $product->descripcion }}</p>
+                            <p class="texto-boton-general tamanio-precio">{{ $product->precio }}</p>
                             <a href="{{ route('product.show', ['product' => $product]) }}"
                                 class="boton texto-boton-general">saber mas</a>
                         </div>
