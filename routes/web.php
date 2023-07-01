@@ -33,10 +33,10 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::get('/product/{category}', [ProductControllerClient::class, 'index'])->name('product.index');
 Route::get('/product/show/{product:slug}', [ProductControllerClient::class, 'show'])->name('product.show'); //le pasamos toda la clase $product desde el index
-Route::get('/empresa', [EmpresaControllerCliente::class , 'index'])->name('empresa.index');
+Route::get('/empresa', [EmpresaControllerCliente::class, 'index'])->name('empresa.index');
 Route::get('/contacto', [ContactoControllerCliente::class, 'index'])->name('contacto.index');
-Route::get('/busqueda' , [ProductControllerClient::class , 'search'])->name('busqueda.search');
-Route::get('/galeria' , [GaleriaController::class , 'index'])->name('galeria.index');
+Route::get('/busqueda', [ProductControllerClient::class, 'search'])->name('busqueda.search');
+Route::get('/galeria', [GaleriaController::class, 'index'])->name('galeria.index');
 
 
 
@@ -67,7 +67,10 @@ Route::put('/admin/category/update/{category}', [CategoryController::class, 'upd
 Route::get('/admin/product', [ProductController::class, 'index'])->name('admin.product.index');
 Route::get('/admin/product/create', [ProductController::class, 'create'])->name('admin.product.create');
 Route::post('/admin/product/store', [ProductController::class, 'store'])->name('admin.product.store');
-Route::get('/admin/product/show/{product:slug}' , [ProductController::class , 'show'])->name('admin.product.show');
-Route::put('/admin/producto/update/{product}', [ProductController::class , 'update'])->name('admin.product.update');
+Route::get('/admin/product/show/{product:slug}', [ProductController::class, 'show'])->name('admin.product.show');
+Route::put('/admin/producto/update/{product}', [ProductController::class, 'update'])->name('admin.product.update');
+
 
 Route::get('/admin/photo', [PhotoController::class, 'index'])->name('admin.photo.index');
+Route::get('/admin/photo/edit/{id}', [PhotoController::class, 'edit'])->name('admin.photo.edit');
+Route::put('/admin/photo/update/{photo}', [PhotoController::class, 'update'])->name('admin.photo.update');

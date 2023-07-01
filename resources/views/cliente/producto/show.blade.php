@@ -59,7 +59,7 @@
         <div class="contenedor">
             <div class="taza-grid">
 
-                {{--TE TRAE TRES PRODUCTOS ALEATORIOS PARA MOSTRARLE AL USUARIO--}}
+                {{-- TE TRAE TRES PRODUCTOS ALEATORIOS PARA MOSTRARLE AL USUARIO --}}
                 @foreach ($aleatorios as $aleatorios)
                     <div class="taza">
                         <div class="taza-img">
@@ -81,7 +81,11 @@
                 @endforeach
 
             </div>
+
+            {{-- COMPONENTE BUSCAR PRODUCTO --}}
+            <x-buscar-producto :categories="$categories" />
         </div>
+
     </section>
 @endsection
 

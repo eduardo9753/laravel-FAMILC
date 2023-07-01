@@ -26,7 +26,7 @@
                             <th scope="col">foto 1</th>
                             <th scope="col">foto 2</th>
                             <th scope="col">foto 3</th>
-                            <th scope="col">Delete</th>
+                            <th scope="col">Edit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,10 +42,8 @@
                                 <td><img class="imagen-precia-admin" src="{{ asset('tazas') . '/' . $photo->foto_tres }}"
                                         alt="Imagen del post {{ $photo->foto_tres }}"></td>
                                 <td>
-                                    <form action="">
-                                        <button type="submit" class="" id=""><i
-                                                class='bx bxs-comment-x bx-tada'></i></button>
-                                    </form>
+                                    <a href="{{ route('admin.photo.edit', ['id' => $photo->id]) }}"><i
+                                            class='bx bxs-message-alt-edit bx-tada'></i></a>
                                 </td>
                             </tr>
                         @endforeach

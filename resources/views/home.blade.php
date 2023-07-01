@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 <!-- <a class="boton secondary play">Play</a>
-                        <a class="boton secondary stop">Stop</a>-->
+                            <a class="boton secondary stop">Stop</a>-->
             </div>
         </div>
     </section>
@@ -155,7 +155,7 @@
                     </div>
                 </a>
 
-               
+
 
                 <a href="{{ route('product.index', ['category' => 10]) }}">
                     <div class="producto-caja-relative">
@@ -201,6 +201,13 @@
             </div>
         </div>
     </section>
+
+    <!--<section id="tazas" class="espacio-section-abajo">
+        <div class="contenedor">
+            {{-- COMPONENTE BUSCAR PRODUCTO --}}
+            <x-buscar-producto :categories="$categories" />
+        </div>
+    </section>-->
 
 
     <section id="taza-fondo" class="espacio-section">

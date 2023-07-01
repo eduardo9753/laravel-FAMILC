@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 @endforeach
-                {{ $products->withQueryString()->links()}}
+                {{ $products->withQueryString()->links() }}
             </div>
         </div>
     </section>

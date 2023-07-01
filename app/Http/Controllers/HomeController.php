@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -11,6 +12,7 @@ class HomeController extends Controller
     //FUNCION PINCIPAL Y UNICA
     public function __invoke()
     {
+        $categories  = Category::all();
         $product = DB::select('SELECT 
         p.nombre,
         p.slug ,
@@ -24,7 +26,8 @@ class HomeController extends Controller
         
         //dd($product);
         return view('home', [
-            'product' => $product
+            'product' => $product,
+            'categories' => $categories 
         ]);
     }
 }
