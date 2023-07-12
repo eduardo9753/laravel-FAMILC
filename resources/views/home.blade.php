@@ -17,7 +17,7 @@
             <source src="{{ asset('video/taza-video.mp4') }}" type="video/mp4">
         </video> --}}
 
-        <div class="header-descripcion text-center">
+        <div class="header-descripcion">
             <h1 class="titulo-header">Famil Creaciones</span></h1>
         </div>
     </header>
