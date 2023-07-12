@@ -39,8 +39,8 @@
 
 #header .titulo-header {
     background-color: var(--colorGeneralTransparente);
-    border-radius: 45px;
-    padding: .8rem 3rem;
+    padding: .3rem 2rem;
+    width: 100%;
     color: var(--blanco);
     font-size: 3rem;
     text-transform: uppercase;
