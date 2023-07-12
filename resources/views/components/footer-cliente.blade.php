@@ -115,7 +115,7 @@
                                 </svg>
                             </div>
                             <p class="footer-parafo"><a target="_blank"
-                                    href="https://www.facebook.com/profile.php?id=100092600122502">facebook</a></p>
+                                    href="https://www.facebook.com/profile.php?id=100093297074011">facebook</a></p>
                         </div>
 
                         <div class="footer-flex">
@@ -131,7 +131,7 @@
                                 </svg>
                             </div>
                             <p class="footer-parafo"><a target="_blank"
-                                    href="https://www.instagram.com/familc.sac/">instagram</a></p>
+                                    href="https://www.instagram.com/familc.creaciones/">instagram</a></p>
                         </div>
 
                         <div class="footer-flex">
@@ -145,7 +145,7 @@
                                 </svg>
                             </div>
                             <p class="footer-parafo"><a target="_blank"
-                                    href="https://www.tiktok.com/@familcsac?lang=es">TikTok</a></p>
+                                    href="https://www.tiktok.com/@familccreaciones?_t=8dw4uXgFmY2&_r=1">TikTok</a></p>
                         </div>
                     </div>
 
