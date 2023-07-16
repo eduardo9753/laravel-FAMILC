@@ -167,6 +167,7 @@
                     </div>
                 </a>
             </div>
+        </div>
     </section>
 
     <section id="tazas" class="espacio-section">

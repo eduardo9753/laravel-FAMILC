@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <!-- <a class="boton secondary play">Play</a>
-                        <a class="boton secondary stop">Stop</a>-->
+                            <a class="boton secondary stop">Stop</a>-->
             </div>
         </div>
     </section>
@@ -117,7 +117,7 @@
                         <source src="{{ asset('video/roca-video.mp4') }}" type="video/mp4">
                     </video>
                 </div>
-                
+
                 <div>
                     <img src="{{ asset('img/galeria/galeria-1.jpeg') }}" alt="">
                 </div>
