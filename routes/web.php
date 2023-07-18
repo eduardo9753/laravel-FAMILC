@@ -3,7 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Admin\LoginContoller;
+use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\RegisterController;
@@ -44,9 +44,9 @@ Route::get('/galeria', [GaleriaController::class, 'index'])->name('galeria.index
 
 /**VISTA DEL ADMINISTRADOR PARA GESTIONAR LOS PRODUCTOS*/
 //llamarlo como "login" para que el middleware lo pueda reconocer
-Route::get('/login', [LoginContoller::class, 'index'])->name('login');
-Route::post('/login/singin', [LoginContoller::class, 'store'])->name('login.store');
-Route::post('/logout', [LoginContoller::class, 'logout'])->name('logout');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login/singin', [LoginController::class, 'store'])->name('login.store');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');

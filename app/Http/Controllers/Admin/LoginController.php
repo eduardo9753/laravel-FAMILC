@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class LoginContoller extends Controller
+class LoginController extends Controller
 {
     //FUNCION INDEX RETORNA UNA VISTA
     public function index()
