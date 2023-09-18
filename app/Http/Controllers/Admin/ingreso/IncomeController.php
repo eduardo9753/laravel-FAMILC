@@ -100,8 +100,5 @@ class IncomeController extends Controller
                 'msg' => 'Hubo un error en el registro de su ingreso'
             ]);
         }
-        //redireccionamos a la tabla de ingresos
-        //return back()->with('mensaje', 'Datos Guardados Correctamente');
-        //return redirect()->route('admin.income.create');
     }
 }

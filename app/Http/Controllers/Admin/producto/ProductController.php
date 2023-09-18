@@ -52,7 +52,7 @@ class ProductController extends Controller
 
     public function create()
     {
-        $category = Category::all();
+        $category = Category::whereNotIn('id',[6,7,8,9,10,11])->get();
         return view('admin.producto.create', [
             'category' => $category
         ]);
@@ -104,7 +104,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //ESTE ES UN OBJETO POR ESO SE PASA DE FRENTE A LA VISTA
-        $category = Category::all();
+        $category = Category::whereNotIn('id',[6,7,8,9,10,11])->get();
         $categoria_producto = Category::find($product->category_id);
         return view('admin.producto.show', [
             'product' => $product,
