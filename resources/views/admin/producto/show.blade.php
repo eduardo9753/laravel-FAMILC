@@ -48,19 +48,30 @@
                                     <textarea name="descripcion" id="descripcion" class="form-control espacio-abajo">{{ $product->descripcion }}</textarea>
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="categoria" class="">Seleccione la categoria</label>
+                                    <select name="categoria" class="form-select espacio-abajo" id="categoria">
+                                        <option value="{{ $categoria_producto->id }}">
+                                            {{ $categoria_producto->nombre }}
+                                        </option>
+                                        @foreach ($category as $category)
+                                            <option value="{{ $category->id }}">{{ $category->nombre }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="categoria" class="">Seleccione la categoria</label>
-                                            <select name="categoria" class="form-select espacio-abajo" id="categoria">
-                                                <option value="{{ $categoria_producto->id }}">
-                                                    {{ $categoria_producto->nombre }}
-                                                </option>
-                                                @foreach ($category as $category)
-                                                    <option value="{{ $category->id }}">{{ $category->nombre }}
-                                                    </option>
-                                                @endforeach
-                                            </select>
+                                            <label for="precio" class="">Precio de Venta</label>
+                                            <input type="text" id="precio" name="precio"
+                                                class="form-control espacio-abajo" placeholder="precio" autocomplete="off"
+                                                value="{{ $product->precio }}">
+                                            {{-- VALIDACION CON VALIDATE --}}
+                                            @error('precio')
+                                                <p class="error-registro-usuario">{{ $message }}</p>
+                                            @enderror
                                         </div>
                                     </div>
 
@@ -93,6 +104,3 @@
         </div>
     </section>
 @endsection
-
-
-

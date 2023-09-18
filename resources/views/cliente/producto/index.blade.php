@@ -42,10 +42,13 @@
                             <a href="{{ route('product.show', ['product' => $product]) }}"
                                 class="boton boton-color mt-3">saber
                                 mas</a>
-
-                            <a href="#" class="agregar-carrito boton boton-sin-color mb-3"
-                                data-id="{{ $product->id }}">Agregar<i class='bx bx-cart-add bx-flip-vertical bx-tada'
-                                    style='color:#a205a1'></i></a>
+                            @if ($product->stock >= 1)
+                                <a href="#" class="agregar-carrito boton boton-sin-color mb-3"
+                                    data-id="{{ $product->id }}">Agregar<i class='bx bx-cart-add bx-flip-vertical bx-tada'
+                                        style='color:#a205a1'></i></a>
+                            @else
+                                <a class="boton boton-sin-color mb-3">Agotado</a>
+                            @endif
                         </div>
                     </div>
                 @endforeach
@@ -58,5 +61,7 @@
 
 
 
-{{-- FOOTER --}}
-<x-footer-cliente />
+<!--FOOTER -->
+@section('footer')
+    <x-footer-cliente />
+@endsection

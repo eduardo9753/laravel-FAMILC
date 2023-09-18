@@ -56,5 +56,7 @@
 
 
 
-{{-- FOOTER --}}
-<x-footer-cliente />
+<!--FOOTER -->
+@section('footer')
+    <x-footer-cliente />
+@endsection

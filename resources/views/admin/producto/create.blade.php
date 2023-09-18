@@ -52,18 +52,34 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <!--<div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="stock" class="">stock producto</label>
-                                            <input type="text" id="stock" name="stock"
-                                                class="form-control espacio-abajo" placeholder="stock" autocomplete="off"
-                                                value="{{ old('stock') }}">
-                                            {{-- VALIDACION CON VALIDATE --}}
-                                            @error('stock')
-                                                <p class="error-registro-usuario">{{ $message }}</p>
-                                            @enderror
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="stock" class="">Stock producto</label>
+                                                <input type="text" id="stock" name="stock"
+                                                    class="form-control espacio-abajo" placeholder="stock"
+                                                    autocomplete="off" value="{{ old('stock') }}">
+                                                {{-- VALIDACION CON VALIDATE --}}
+                                                @error('stock')
+                                                    <p class="error-registro-usuario">{{ $message }}</p>
+                                                @enderror
+                                            </div>
                                         </div>
-                                    </div>-->
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="precio" class="">Precio de Venta</label>
+                                                <input type="text" id="precio" name="precio"
+                                                    class="form-control espacio-abajo" placeholder="precio"
+                                                    autocomplete="off" value="{{ old('precio') }}">
+                                                {{-- VALIDACION CON VALIDATE --}}
+                                                @error('precio')
+                                                    <p class="error-registro-usuario">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -77,8 +93,8 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="foto_uno" class="">Url de primera foto</label>
-                                    <input type="text" id="foto_uno" name="foto_uno"
-                                        class="form-control espacio-abajo" value="{{ old('foto_uno') }}">
+                                    <input type="text" id="foto_uno" name="foto_uno" class="form-control espacio-abajo"
+                                        value="{{ old('foto_uno') }}">
                                     <div class=""> <img class="imagen-precia-admin" src=""
                                             id="imgPreview_foto_uno" alt="Nueva imagen"></div>
                                     {{-- VALIDACION CON VALIDATE --}}
@@ -89,8 +105,8 @@
 
                                 <div class="form-group">
                                     <label for="foto_dos" class="">Segunda foto</label>
-                                    <input type="text" id="foto_dos" name="foto_dos"
-                                        class="form-control espacio-abajo" value="{{ old('foto_dos') }}">
+                                    <input type="text" id="foto_dos" name="foto_dos" class="form-control espacio-abajo"
+                                        value="{{ old('foto_dos') }}">
                                     <div class=""> <img class="imagen-precia-admin" src=""
                                             id="imgPreview_foto_dos" alt="Nueva imagen"></div>
                                     {{-- VALIDACION CON VALIDATE --}}
@@ -127,5 +143,3 @@
         </div>
     </section>
 @endsection
-
-

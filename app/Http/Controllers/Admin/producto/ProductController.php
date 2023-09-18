@@ -68,6 +68,8 @@ class ProductController extends Controller
         //validar los datos
         $this->validate($request, [
             'nombre' => 'required|unique:products|max:50', //METERLE UN UNIQUE
+            'precio' => 'required',
+            'stock' => 'required',
             'descripcion' => 'required',
             'foto_uno' => 'required',
             'foto_dos' => 'required',
@@ -77,13 +79,13 @@ class ProductController extends Controller
         //guardar los datos del producto
         $save = Product::create([
             'nombre' => $request->nombre,
-            'precio' => '0',
+            'precio' => $request->precio,
             'slug' => $request->slug,
             'descripcion' => $request->descripcion,
             'estado' => 1, //(1)ACTIVO (2)INACTIVO
             'user_id' => auth()->user()->id,
             'category_id' => $request->categoria,
-            'stock' => '0'
+            'stock' => $request->stock,
         ]);
 
         //guardar las fotos del producto en la tabla de photos
@@ -120,6 +122,8 @@ class ProductController extends Controller
         $this->validate($request, [
             'nombre' => 'required|max:50', //METERLE UN UNIQUE
             'descripcion' => 'required',
+            'stock' => 'required',
+            'precio' => 'required',
         ]);
 
         //ACTUALIZANDO LOS DATOS
@@ -128,6 +132,7 @@ class ProductController extends Controller
         $product->descripcion = $request->descripcion;
         $product->category_id = $request->categoria;
         $product->stock = $request->stock;
+        $product->precio = $request->precio;
         $product->save();
 
         //RETORNAMOS LA VISTA CON LA TABLA DE DATOS

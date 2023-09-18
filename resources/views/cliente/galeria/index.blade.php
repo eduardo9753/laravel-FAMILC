@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <!-- <a class="boton secondary play">Play</a>
-                            <a class="boton secondary stop">Stop</a>-->
+                                <a class="boton secondary stop">Stop</a>-->
             </div>
         </div>
     </section>
@@ -173,5 +173,7 @@
 
 
 
-{{-- FOOTER --}}
-<x-footer-cliente />
+<!--FOOTER -->
+@section('footer')
+    <x-footer-cliente />
+@endsection
