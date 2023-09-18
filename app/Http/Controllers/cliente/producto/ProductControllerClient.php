@@ -27,7 +27,7 @@ class ProductControllerClient extends Controller
                 'photos.foto_dos',
                 'photos.foto_tres'               //VARIABLE QUE ESTA EN EL HOME [1-5]
             )->where('products.precio', '>', 0)
-            ->whereNotIn('id',[6,7,8,9,10,11])
+            ->whereNotIn('category_id',[6,7,8,9,10,11])
             ->where('products.category_id', '=', $request->category)->orderBy('products.id', 'desc')->simplePaginate(9);
         //dd($product);
         return view('cliente.producto.index', [
@@ -40,7 +40,7 @@ class ProductControllerClient extends Controller
     {
         //echo "id: " . $product->id;
         $slug = $product->nombre;
-        $categories = Category::all();
+        $categories = Category::whereNotIn('id',[6,7,8,9,10,11])->get();
 
         //CUANDO ES UN GET TE RETORNA UNA COLECCION DE DATOS
         //ENTONCES TIENES QUE RECORRER ESOS DATOS POR MEDIO DE UN BUBLEW FOREACH()
@@ -57,7 +57,7 @@ class ProductControllerClient extends Controller
                 'photos.foto_dos',
                 'photos.foto_tres'
             )->where('products.precio', '>', 0)
-            ->whereNotIn('id',[6,7,8,9,10,11])
+            ->whereNotIn('category_id',[6,7,8,9,10,11])
             ->where('products.id', '=', $product->id)->get();
 
 
@@ -75,7 +75,7 @@ class ProductControllerClient extends Controller
                 'photos.foto_dos',
                 'photos.foto_tres'           //LE PASAMOS EL ID DEL FORMULARIO DE BUSQUEDA
             )->where('products.precio', '>', 0)
-            ->whereNotIn('id',[6,7,8,9,10,11])
+            ->whereNotIn('category_id',[6,7,8,9,10,11])
             ->inRandomOrder()->limit(3)->get();
 
 
@@ -91,7 +91,7 @@ class ProductControllerClient extends Controller
     public function search(Request $request)
     {
         //LISTA DE CATEGORIAS
-        $categories = Category::all();
+        $categories = Category::whereNotIn('id',[6,7,8,9,10,11])->get();
 
         //LO RECORRIMOS CON UN FOREACH EN LA VISTA
         $products = Product::join('photos', 'photos.product_id', '=', 'products.id')
@@ -106,7 +106,7 @@ class ProductControllerClient extends Controller
                 'photos.foto_dos',
                 'photos.foto_tres'           //LE PASAMOS EL ID DEL FORMULARIO DE BUSQUEDA
             )->where('products.precio', '>', 0)
-            ->whereNotIn('id',[6,7,8,9,10,11])
+            ->whereNotIn('category_id',[6,7,8,9,10,11])
             ->where('products.category_id', '=', $request->categoria)->orderBy('products.id', 'desc')->simplePaginate(6);
 
         return view('cliente.producto.search', [
