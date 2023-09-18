@@ -13,7 +13,7 @@
 {{-- CONTENIDO --}}
 @section('contenido')
     <section id="" class="mt-5">
-        <div class="contenedor">
+        <div class="contenedor table-responsive">
 
             <div>
                 <a href="{{ route('admin.product.create') }}" class="boton boton-sin-color mb-3">Nuevo Producto</a>

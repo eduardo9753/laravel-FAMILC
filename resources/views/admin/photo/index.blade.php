@@ -12,7 +12,7 @@
 {{-- CONTENIDO --}}
 @section('contenido')
     <section id="categoria" class="mt-5">
-        <div class="contenedor">
+        <div class="contenedor table-responsive">
             <div class="caja-categoria">
                 <div>
                     <a href="{{ route('admin.product.index') }}" class="boton boton-sin-color mb-3">Ver productos</a>
