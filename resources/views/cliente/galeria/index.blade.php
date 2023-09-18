@@ -24,7 +24,7 @@
 {{-- CONTENIDO --}}
 @section('contenido')
     <!--  OWLCOURRESL Demos -->
-    <section id="demos">
+    <section id="demos" class="container-fluid">
         <div class="row">
             <div class="large-12 columns">
                 <div class="owl-carousel owl-theme">

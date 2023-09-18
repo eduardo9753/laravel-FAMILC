@@ -16,6 +16,7 @@ class Product extends Model
         'descripcion',
         'estado',
         'user_id',
-        'category_id'
+        'category_id',
+        'stock'
     ];
 }

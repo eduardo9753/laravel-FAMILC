@@ -32,11 +32,9 @@
                 <div class="empresa-caja-dos">
                     <div>
                         <h3 class="empresa-titulo">La empresa</h3>
-                        <p class="empresa-parrafo">Somos FAMILC Creaciones un emprendimiento que realiza todo tipo de
-                            personalización en polos, tazas, toma todos, foto rocas, poza vasos, chop y otros productos,
-                            realizamos la producción con la técnica de sublimación, contamos con un equipo de alta calidad
-                            para que los diseños sean
-                            nítidos y full color 🎁</p>
+                        <p class="empresa-parrafo">Somos FAMILC 4 Ositos, venta de productos al por mayor y tienda virtual,
+                            aquí encontraras variedades de productos para uso personal, así como familiar con los mejores
+                            precios del mercado dado que estamos enlazados con las mejoras importadoras del país 🎁</p>
                     </div>
                     <div>
                         <h3 class="empresa-titulo">Mision</h3>

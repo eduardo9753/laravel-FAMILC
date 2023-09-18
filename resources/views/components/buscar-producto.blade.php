@@ -2,9 +2,8 @@
     {{-- YA QUE SOLO VMOS A DEVOLVER UNA VISTA CON DATOS --}}
     <form action="{{ route('busqueda.search') }}" method="GET">
         <div class="flex-buscador">
-            <div class="caja-grupo">
-                <label for="categoria" class="">Seleccione la categoria</label>
-                <select name="categoria" class="caja-admin espacio-abajo" id="categoria">
+            <div class="form-group">
+                <select name="categoria" class="form-select w-100" id="categoria">
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->nombre }}</option>
                     @endforeach
@@ -12,7 +11,7 @@
             </div>
 
             <div>
-                <button type="submit" class="boton boton-login">
+                <button type="submit" class="boton boton-color">
                     Buscar Producto
                 </button>
             </div>

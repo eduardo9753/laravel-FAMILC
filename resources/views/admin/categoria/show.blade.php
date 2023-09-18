@@ -12,34 +12,38 @@
 
 {{-- CONTENIDO --}}
 @section('contenido')
-    <section id="categoria" class="espacio-section">
+    <section id="categoria" class="mt-5">
         <div class="contenedor">
-            <div class="caja-formulario">
-                <form action="{{ route('admin.category.update', $category) }}" method="POST">
+            <div class="card">
+                <div class="card-header boton-color">
+                    <h1 class="lead">Categoria</h1>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('admin.category.update', $category) }}" method="POST">
 
-                    {{-- METODO ACTUALIZAR --}}
-                    @method('PUT')
+                        {{-- METODO ACTUALIZAR --}}
+                        @method('PUT')
 
-                    {{-- TOKEN DE SEGURIDAD --}}
-                    @csrf
+                        {{-- TOKEN DE SEGURIDAD --}}
+                        @csrf
 
-                    <div class="caja-grupo">
-                        <label for="nombre" class="">Nombre de la categoria</label>
-                        <input type="nombre" id="nombre" name="nombre" class="caja-admin espacio-abajo"
-                            placeholder="Categoria" autocomplete="off" value="{{ $category->nombre }}">
-                        {{-- VALIDACION CON VALIDATE --}}
-                        @error('nombre')
-                            <p class="error-registro-usuario">{{ $message }}</p>
-                        @enderror
-                    </div>
+                        <div class="form-group">
+                            <label for="nombre" class="">Nombre de la categoria</label>
+                            <input type="nombre" id="nombre" name="nombre" class="form-control espacio-abajo"
+                                placeholder="Categoria" autocomplete="off" value="{{ $category->nombre }}">
+                            {{-- VALIDACION CON VALIDATE --}}
+                            @error('nombre')
+                                <p class="error-registro-usuario">{{ $message }}</p>
+                            @enderror
+                        </div>
 
-
-                    <div>
-                        <button type="submit" name="btn-login" id="" class="boton boton-login">
-                            Actualizar Categoria
-                        </button>
-                    </div>
-                </form>
+                        <div>
+                            <button type="submit" name="btn-login" id="" class="boton boton-login">
+                                Actualizar Categoria
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -47,8 +51,4 @@
 
 
 
-{{-- FOOTER --}}
-@section('footer')
-    <footer id="footer">
-    </footer>
-@endsection
+

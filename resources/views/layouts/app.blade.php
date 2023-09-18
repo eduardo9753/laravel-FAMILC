@@ -16,32 +16,39 @@
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Montserrat:wght@300;400&family=Poppins:wght@200&family=Raleway:wght@300&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway:wght@300&display=swap"
         rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- BOX ICONS -->
-    <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Owl Stylesheets -->
-    <link rel="stylesheet" href="{{ asset('owl/dist/assets/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('owl/dist/assets/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/owl/dist/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/owl/dist/assets/owl.theme.default.min.css') }}">
 
     <!-- DATATABLES CSS -->
-    <link rel="stylesheet" href="{{ asset('datatable/dataTables.css') }}">
-    <link rel="stylesheet" href="{{ asset('datatable/dataTables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/datatable/dataTables.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/datatable/dataTables.min.css') }}">
 
     <!-- SPLIDE CSS -->
-    <link rel="stylesheet" href="{{ asset('splide/dist/css/splide.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('splide/dist/css/splide-core.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/splide/dist/css/splide.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lib/splide/dist/css/splide-core.min.css') }}">
 
     <!-- ICONO DEL PROYECTO -->
     <link rel="icon" type="image/png" href="{{ asset('img/logo/FAMILC.png') }}">
 
     <!-- NORMALIZE CSS -->
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+
+    <!--CSS SWEEALERT2-->
+    <link rel="stylesheet" href="{{ asset('lib/sweetalert2/sweetalert2.min.css') }}">
+
+    <!--ANIMACION CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- CSS TIENDA -->
     <link rel="stylesheet" href="{{ asset('css/colores.css') }}">
@@ -93,34 +100,59 @@
     <!-- FOOTER -->
     @yield('footer')
 
-    <!-- JS QUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.js"
-        integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 
-    <!-- javascript OWL CAROUSEL -->
-    <script src="{{ asset('owl/dist/owl.carousel.js') }}"></script>
-    <script src="{{ asset('owl/dist/owl.carousel.min.js') }}"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    -->
 
+    <!-- CDN JQUERY -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-    <!-- DATATABLES JS -->
-    <script src="{{ asset('datatable/dataTables.js') }}"></script>
-    <script src="{{ asset('datatable/dataTables.min.js') }}"></script>
+    <!-- javascript OWL CAROUSEL LIB-->
+    <script src="{{ asset('lib/owl/dist/owl.carousel.js') }}"></script>
+    <script src="{{ asset('lib/owl/dist/owl.carousel.min.js') }}"></script>
 
+    <!-- DATATABLES JS LIB-->
+    <script src="{{ asset('lib/datatable/dataTables.js') }}"></script>
+    <script src="{{ asset('lib/datatable/dataTables.min.js') }}"></script>
 
+    <!--CSS SWEEALERT2-->
+    <script src="{{ asset('lib/sweetalert2/sweetalert2.min.js') }}"></script>
 
     <!-- SPLIDE JS -->
-    <script src="{{ asset('splide/dist/js/splide.min.js') }}"></script>
+    <script src="{{ asset('lib/splide/dist/js/splide.min.js') }}"></script>
 
-    <!-- SCRIPT -->
-    <script src="{{ asset('js/splide.js') }}"></script>
-    <script src="{{ asset('js/owl.js') }}"></script>
-    <script src="{{ asset('js/cargarImagenUno.js') }}"></script>
-    <script src="{{ asset('js/cargarImagenDos.js') }}"></script>
-    <script src="{{ asset('js/cargarImagenTres.js') }}"></script>
+
+
+    <!--SCRIPT ADMINISTRADOR-->
+    <script src="{{ asset('js/Admin/cargarImagenUno.js') }}"></script>
+    <script src="{{ asset('js/Admin/cargarImagenDos.js') }}"></script>
+    <script src="{{ asset('js/Admin/cargarImagenTres.js') }}"></script>
+
+    <!--SCCRIPT GENERALES-->
     <script src="{{ asset('js/dataTables.js') }}"></script>
+    <script src="{{ asset('js/cliente/owl.js') }}"></script>
+    
+
+    <!--SCRIPT CLIENTE CARRITO DE COMPRAS-->
+    <script src="{{ asset('js/cliente/cart/venta.js') }}"></script>
 
 
 
 </body>
 
 </html>
+
+
+

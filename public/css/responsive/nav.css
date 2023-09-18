@@ -2,7 +2,7 @@
 /*ARRANCA DESDE EL MINIMO 0PX DE ANCHO HASTA EL MAXIMO DE 800PX DE ANCHO*/
 @media (min-width: 0px) and (max-width: 800px){ 
     .contenido-menu {
-        width: 50%;
+        width: 60%;
     }
 }
 
@@ -12,6 +12,6 @@
 /*ARRANCA DESDE EL MINIMO 0PX DE ANCHO HASTA EL MAXIMO DE 800PX DE ANCHO*/
 @media (min-width: 800px) and (max-width: 1200px){ 
     .contenido-menu {
-        width: 50%;
+        width: 60%;
     }
 }

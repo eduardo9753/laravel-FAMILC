@@ -39,21 +39,3 @@
     -moz-box-shadow: 3px 8px 67px 21px rgba(189,189,189,1);
     box-shadow: 3px 8px 67px 21px rgba(189,189,189,1);
 }
-
-#flex-splide .flex-splide-tamanio-dos .flex-splide-nombre, #flex-splide .flex-splide-tamanio-dos .flex-splide-precio{
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--colorGeneral);
-}
-
-#flex-splide .flex-splide-tamanio-dos .flex-splide-precio {
-    margin-bottom: 2rem;
-}
-
-#flex-splide .flex-splide-tamanio-dos .flex-splide-decripcion {
-    font-size: 1.7rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin-top: .6rem;
-    margin-bottom: 1rem;
-}
