@@ -44,7 +44,7 @@ class ProductController extends Controller
         FROM products p 
         INNER JOIN categories c ON p.category_id = c.id
         INNER JOIN users u ON p.user_id = u.id
-        where p.id NOT IN(6,7,8,9,10,11)');
+        where c.id NOT IN(6,7,8,9,10,11)');
 
         return view('admin.producto.index', [
             'product' => $product
