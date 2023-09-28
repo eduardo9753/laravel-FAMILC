@@ -52,7 +52,7 @@ class SublimacionControllerCliente extends Controller
                 'photos.foto_dos',
                 'photos.foto_tres'
             )->where('products.precio', '>', 0)
-            ->whereNotIn('category_id', [6, 7, 8, 9, 10, 11])
+            ->whereIn('category_id', [6, 7, 8, 9, 10, 11])
             ->where('products.id', '=', $product->id)->get();
 
         return view('cliente.sublimacion.show', [
