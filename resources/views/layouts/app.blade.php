@@ -11,7 +11,7 @@
     <meta name="description"
         content="Tienda de productos personalizados, aqui encontraras distintos tipos de productos diseñados y podras tambien tu fotografias para retratarlos en los siguientes productos  - Tazas , Polos , Cuadro Roca , Tazas Chop">
 
-    <title>FAMILC | Creaciones</title>
+    <title>FAMILC</title>
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
