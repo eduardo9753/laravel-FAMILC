@@ -9,8 +9,8 @@ class IncomeDetail extends Model
 {
     use HasFactory;
 
-     //CAMPOS DE LA TABLA DE LA BASE DE DATOS
-     protected $fillable = [
+    //CAMPOS DE LA TABLA DE LA BASE DE DATOS
+    protected $fillable = [
         'income_id',
         'product_id',
         'cantidad',

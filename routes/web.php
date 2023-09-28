@@ -15,6 +15,7 @@ use App\Http\Controllers\cliente\contacto\ContactoControllerCliente;
 use App\Http\Controllers\cliente\empresa\EmpresaControllerCliente;
 use App\Http\Controllers\cliente\galeria\GaleriaController;
 use App\Http\Controllers\cliente\mercadopago\MercadoPagoControllerCliente;
+use App\Http\Controllers\cliente\mercadopago\MercadopagoWebHookControllerCliente;
 use App\Http\Controllers\cliente\producto\ProductControllerClient;
 use App\Http\Controllers\cliente\sublimacion\SublimacionControllerCliente;
 use App\Http\Controllers\cliente\venta\SaleControllerCliente;
@@ -48,10 +49,17 @@ Route::get('/sublimacion/producto', [SublimacionControllerCliente::class, 'index
 Route::get('/sublimacion/show/{product:slug}', [SublimacionControllerCliente::class , 'show'])->name('sublimacion.show');
 
 
+
 Route::post('/mercadopago/pay', [MercadoPagoControllerCliente::class, 'pay'])->name('mercadopago.pay');
 Route::get('/mercadopago/success', [MercadoPagoControllerCliente::class, 'success'])->name('mercadopago.success');
 Route::get('/mercadopago/failure', [MercadoPagoControllerCliente::class, 'failure'])->name('mercadopago.failure');
 Route::get('/mercadopago/pending', [MercadoPagoControllerCliente::class, 'pending'])->name('mercadopago.pending');
+
+
+
+//webhook de la compra
+Route::get('/mercadopago/webhook', [MercadopagoWebHookControllerCliente::class, 'index'])->name('mercadopago.webhook');
+
 
 
 /**VISTA DEL ADMINISTRADOR PARA GESTIONAR LOS PRODUCTOS*/
@@ -84,17 +92,16 @@ Route::post('/admin/income/store', [IncomeController::class, 'store'])->name('ad
 
 
 
-
 Route::get('/admin/sales', [SaleController::class, 'index'])->name('admin.sale.index');
 Route::get('/admin/sales/show/{id}', [SaleController::class, 'show'])->name('admin.sale.show');
 Route::get('/admin/sales/list', [SaleController::class, 'list'])->name('admin.sale.list');
 Route::put('/admin/sales/update/{id}', [SaleController::class, 'update'])->name('admin.sale.update');
 
 
+
 Route::get('/admin/photo', [PhotoController::class, 'index'])->name('admin.photo.index');
 Route::get('/admin/photo/edit/{id}', [PhotoController::class, 'edit'])->name('admin.photo.edit');
 Route::put('/admin/photo/update/{photo}', [PhotoController::class, 'update'])->name('admin.photo.update');
-
 
 
 

@@ -9,94 +9,20 @@ use App\Models\Product;
 use App\Models\Sale;
 use App\Models\SaleDetail;
 use Illuminate\Http\Request;
-use MercadoPago\SDK;
-use MercadoPago\Preference;
-use MercadoPago\Item;
+use Illuminate\Support\Facades\Log;
 
-
-class MercadoPagoControllerCliente extends Controller
+class MercadopagoWebHookControllerCliente extends Controller
 {
-    //CREAR EL BOTON DE MERCADOPAGO
-    public function pay(Request $request)
+    //WEBHOOK PARA LOS CLIENTES QUE CIERRAN Y NO PRESIONAN EL BOTON "Volver al sitio"
+    public function index(Request $request)
     {
-        //ARREGLO DE DATOS PARA VALIDAR EL STOCK
-        $product_id = $request->product_id;
-        $cantidad = $request->cantidad;
-        $contStock = 0;
-        while ($contStock < count($product_id)) {
-            //BUSCAMOS AL PRODUCTO POR ID Y VALIDAMOS EL STOCK
-            $producto = Product::find($product_id[$contStock]);
-            $stock_actual = $producto->stock;
-            if ($stock_actual <= $cantidad[$contStock]) { //<
-                return response()->json(['code' => 2, 'msg' => $producto->nombre,]);
-            }
-            $contStock = $contStock + 1;
-        }
+        // Obtén el contenido de la solicitud del webhook
+        $payload = $request->getContent();
 
+        // Decodifica el contenido JSON en un arreglo asociativo
+        $dataArray = json_decode($payload, true);
 
-
-        /* Agrega credenciales*/
-        SDK::setAccessToken(config('mercadopago.token'));
-        $public_key = config('mercadopago.public_key');
-        $preference = new Preference();
-        $carrito = [];
-
-        // Crea un ítem en la preferencia
-        $product_id = $request->product_id;
-        $cantidad = $request->cantidad;
-        $precio_venta = $request->precio_venta;
-        $cont = 0;
-        while ($cont < count($product_id)) {
-            $item = new Item();
-            $item->title = 'Mi producto';
-            $item->quantity = $cantidad[$cont];
-            $item->unit_price = $precio_venta[$cont];
-            $cont = $cont + 1;
-
-            $carrito[] = $item;
-        }
-        $preference->items = $carrito;
-
-        // Guarda los datos del $request en la sesión
-        $request->session()->put('data', $request->all());
-        $preference->back_urls = [
-            'success' => route('mercadopago.success'),
-            'failure' => route('mercadopago.failure'),
-            'pending' => route('mercadopago.pending'),
-        ];
-        $preference->auto_return = 'approved'; // Redirige automáticamente al usuario después de un pago aprobado
-
-        // Guarda la preferencia
-        $save = $preference->save();
-
-        // Obtiene el link de pago
-        $paymentLink = $preference->init_point;
-        //dd($carrito);//dd($preference);//echo $preference->id;
-
-        if ($save) {
-            $dato = [
-                'public_key' => $public_key,
-                'preference_id' =>  $preference->id,
-                'url' => $preference->back_urls,
-                'init_point' => $paymentLink
-            ];
-            return response()->json([
-                'code' => 1,
-                'msg' => $dato
-            ]);
-        } else {
-            return response()->json([
-                'code' => 0,
-                'msg' => 'Error de Datos'
-            ]);
-        }
-    }
-
-    //pago exitoso y retornamos a este metodo para guardar la compra
-    public function success(Request $request)
-    {
-        /**/
-        if ($request->status === 'approved') {
+        if ($dataArray['type'] === 'payment') {
 
             // Obtiene los datos del $request desde la sesión en array 
             //asi se accede en datos de array: $requestData['numero_documento']
@@ -177,23 +103,21 @@ class MercadoPagoControllerCliente extends Controller
                 ]);
 
                 if ($pay) {
-                    return redirect()->route('home')->with('pay', "se genero su compra: " . $person->nombres . "");
+                    echo "
+                    <script>
+                        carrito_entrada = []; localStorage.removeItem('carrito_venta');
+                        localStorage.clear(); 
+            
+                        if(carrito_entrada.length <= 0){
+                           alert('carrito vacio')
+                        }
+                    </script>";
                 } else {
-                    return redirect()->route('home')->with('nopay', 'No se realizó el pago correctamente');
+                    Log::info("No se realizó el pago correctamente");
                 }
             } else {
-                return redirect()->route('home')->with('nopay', 'No se realizó el pago correctamente');
+                Log::info("No se realizó el pago correctamente");
             }
         }
-    }
-
-    public function failure()
-    {
-        return "error de pago";
-    }
-
-    public function pending()
-    {
-        return "Pago Pendiente";
     }
 }

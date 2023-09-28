@@ -10,8 +10,8 @@ class Person extends Model
     use HasFactory;
 
 
-     //CAMPOS DE LA TABLA DE LA BASE DE DATOS
-     protected $fillable = [
+    //CAMPOS DE LA TABLA DE LA BASE DE DATOS
+    protected $fillable = [
         'tipo_persona', //1:proveedor  2:Cliente
         'nombres',
         'tipo_documento',
