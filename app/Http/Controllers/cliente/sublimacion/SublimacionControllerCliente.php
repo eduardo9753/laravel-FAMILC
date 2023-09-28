@@ -55,7 +55,7 @@ class SublimacionControllerCliente extends Controller
             ->whereNotIn('category_id', [6, 7, 8, 9, 10, 11])
             ->where('products.id', '=', $product->id)->get();
 
-        return view('cliente.producto.show', [
+        return view('cliente.sublimacion.show', [
             'product' => $product,
             'slug' => $slug,
             'categories' => $categories
