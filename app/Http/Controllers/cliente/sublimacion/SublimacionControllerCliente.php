@@ -23,7 +23,7 @@ class SublimacionControllerCliente extends Controller
                 'photos.foto_dos',
                 'photos.foto_tres'               //VARIABLE QUE ESTA EN EL HOME [1-5]
             )->where('products.precio', '>', 0)
-            ->whereNotIn('category_id', [6, 7, 8, 9, 10, 11])->orderBy('products.id', 'desc')->simplePaginate(2);
+            ->whereIn('category_id', [6, 7, 8, 9, 10, 11])->orderBy('products.id', 'desc')->simplePaginate(8);
         return view('cliente.sublimacion.index', [
             'products' => $products
         ]);
