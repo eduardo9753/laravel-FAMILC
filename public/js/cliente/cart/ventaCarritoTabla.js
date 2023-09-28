@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     //(9)ENVIAR DATOS POR AJAX Y GUARDAR LA INFORMACION EN LA BASE DE DATOS
-    $('#form-cart-venta').on('submit', function (e) {
+    $('#form-cart-venta').on('click', '#guardar-datos-venta', function (e) {
         e.preventDefault();
 
         var form = $('#form-cart-venta');

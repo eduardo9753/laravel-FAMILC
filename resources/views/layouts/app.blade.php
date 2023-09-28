@@ -100,6 +100,9 @@
     <!-- FOOTER -->
     @yield('footer')
 
+    <!--SDK MERCADOPAGO-->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -143,7 +146,7 @@
     <!--SCCRIPT GENERALES-->
     <script src="{{ asset('js/dataTables.js') }}"></script>
     <script src="{{ asset('js/cliente/owl.js') }}"></script>
-    
+
 
     <!--SCRIPT CLIENTE CARRITO DE COMPRAS-->
     <script src="{{ asset('js/cliente/cart/venta.js') }}"></script>
@@ -153,6 +156,3 @@
 </body>
 
 </html>
-
-
-

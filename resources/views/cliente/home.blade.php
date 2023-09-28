@@ -22,6 +22,21 @@
         </div>
     </header>
     <div id="header-footer">
+        {{-- MENSAJE EL PAGO FUE CORRECTO --}}
+        @if (session('pay'))
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Obs:</strong> {{ session('pay') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+        {{-- MENSAJE EL PAGO FUE CORRECTO --}}
+        @if (session('nopay'))
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Obs:</strong> {{ session('nopay') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <p class="parrafo-header">Productos personalizadas</p>
     </div>
 
@@ -92,7 +107,7 @@
                     </div>
                 </div>
                 <!-- <a class="boton secondary play">Play</a>
-                                                                                                                                        <a class="boton secondary stop">Stop</a>-->
+                                                                                                                                            <a class="boton secondary stop">Stop</a>-->
             </div>
         </div>
     </section>

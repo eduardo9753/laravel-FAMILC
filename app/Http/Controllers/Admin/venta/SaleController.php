@@ -44,6 +44,7 @@ class SaleController extends Controller
         ]);
     }
 
+    //funcion para actualizar al cliente - venta y actualizar estock producto
     public function update($id, Request $request)
     {
         //dato venta por id
@@ -95,20 +96,21 @@ class SaleController extends Controller
 
 
     //PEDIDOS PAGADOS
-    public function list(){
+    public function list()
+    {
         $sales = Sale::join('people', 'people.id', '=', 'sales.person_id')
-        ->select(
-            'people.nombres',
-            'people.direccion',
-            'people.telefono',
-            'people.email',
-            'sales.id',
-            'sales.total_venta',
-            'sales.estado',
-        )
-        ->where('sales.estado', '=', 'CANCELADO')->orderBy('sales.id', 'desc')->get();
-    return view('admin.venta.list', [
-        'sales' => $sales
-    ]);
+            ->select(
+                'people.nombres',
+                'people.direccion',
+                'people.telefono',
+                'people.email',
+                'sales.id',
+                'sales.total_venta',
+                'sales.estado',
+            )
+            ->where('sales.estado', '=', 'CANCELADO')->orderBy('sales.id', 'desc')->get();
+        return view('admin.venta.list', [
+            'sales' => $sales
+        ]);
     }
 }

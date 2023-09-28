@@ -64,7 +64,6 @@ class SaleControllerCliente extends Controller
         $product_id = $request->product_id;
         $cantidad = $request->cantidad;
         $precio_venta = $request->precio_venta;
-        $cantidad = $request->cantidad;
         $cont = 0;
         while ($cont < count($product_id)) {
             $detail = new SaleDetail();
@@ -77,7 +76,8 @@ class SaleControllerCliente extends Controller
         }
 
         if ($save) {
-            Mail::to(['j.a_alarcon_24@outlook.com', 'nsnyliz@gmail.com', 'Huamanirosase@gmail.com', 'nunezcancharimabell@gmail.com'])->send(new AdminMail($request->nombres, $request->total_venta, $request->telefono));
+            /*Mail::to(['j.a_alarcon_24@outlook.com', 'nsnyliz@gmail.com', 'Huamanirosase@gmail.com', 'nunezcancharimabell@gmail.com'])->send(new AdminMail($request->nombres, $request->total_venta, $request->telefono));
+            Mail::to($person->email)->send(new UsuarioMail($request->nombres, $request->total_venta, $request->telefono));*/
             Mail::to($person->email)->send(new UsuarioMail($request->nombres, $request->total_venta, $request->telefono));
             return response()->json([
                 'code' => 1,

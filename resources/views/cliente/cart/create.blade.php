@@ -27,7 +27,7 @@
     <section id="producto" class="mt-5">
         <div class="contenedor">
 
-            <form action="{{ route('cart.store') }}" id="form-cart-venta" method="POST" enctype="multipart/form-data">
+            <form action="" id="form-cart-venta" method="POST" enctype="multipart/form-data">
                 {{-- TOKEN DE SEGURIDAD --}}
                 @csrf
                 <div class="card">
@@ -117,18 +117,31 @@
                                             </thead>
                                             <tbody></tbody>
                                         </table>
-                                        <input type="text" style="font-size: 25px" class="boton-sin-color mb-2 input-carrito mt-1"
-                                        value="0" name="total_venta" id="total_venta" readonly>
+                                        <input type="text" style="font-size: 25px"
+                                            class="boton-sin-color mb-2 input-carrito mt-1" value="0"
+                                            name="total_venta" id="total_venta" readonly>
                                     </div>
 
                                 </div>
 
                             </div>
 
-                            <button type="submit" name="" id="guardar-datos-venta"
-                                class="boton boton-color w-100 mt-4">
-                                Finalizar Compra
-                            </button>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <button type="submit" name="" id="guardar-datos-venta"
+                                        class="boton boton-color w-100 mt-4">
+                                        Generar Pedido
+                                    </button>
+                                </div>
+
+                                <div>
+                                    <button type="submit" name="" id="guardar-datos-venta-compra"
+                                        class="boton boton-color w-100 mt-4">
+                                        Comprar ahora
+                                    </button>
+                                    <div id="wallet_container"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,6 +151,9 @@
 
     <!--SCRIPT PARA LISTAR LOS PRODUCTOS EN LA TABLA LOCALSTORAGE-->
     <script src="{{ asset('js/cliente/cart/ventaCarritoTabla.js') }}"></script>
+
+    <!--SCRIP PARA CREAR EL BOTON DE MERCADOPAGO-->
+    <script src="{{ asset('js/cliente/mercadopago/mercadopago.js') }}"></script>
 @endsection
 
 

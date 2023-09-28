@@ -16,7 +16,8 @@
                                     <path d="M17 17h-11v-14h-2" />
                                     <path d="M6 5l14 1l-1 7h-13" />
                                 </svg></a></li>
-                        <li class="item"><a href="{{ route('busqueda.search') }}">Productos</a></li>
+                        <li class="item"><a href="{{ route('busqueda.search') }}">Buscar Productos</a></li>
+                        <li class="item"><a href="{{ route('product.sublimacion') }}">Sublimaciones</a></li>
                         <li class="item"><a href="{{ route('empresa.index') }}">La Empresa</a></li>
                         <li class="item"><a href="{{ route('galeria.index') }}">Galeria</a></li>
                         <li class="item"><a href="{{ route('contacto.index') }}">Contacto</a></li>
