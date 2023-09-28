@@ -44,7 +44,9 @@ Route::get('/galeria', [GaleriaController::class, 'index'])->name('galeria.index
 Route::get('/cart/list', [CartController::class, 'index'])->name('cart.index');
 Route::get('/cart/list/checkout', [CartController::class, 'create'])->name('cart.create');
 Route::post('/cart/list/shopping', [SaleControllerCliente::class, 'store'])->name('cart.store');
-Route::get('/sublimacion/producto', [SublimacionControllerCliente::class , 'index'])->name('product.sublimacion');
+Route::get('/sublimacion/producto', [SublimacionControllerCliente::class, 'index'])->name('product.sublimacion');
+Route::get('/sublimacion/show/{product:slug}', [SublimacionControllerCliente::class , 'show'])->name('sublimacion.show');
+
 
 Route::post('/mercadopago/pay', [MercadoPagoControllerCliente::class, 'pay'])->name('mercadopago.pay');
 Route::get('/mercadopago/success', [MercadoPagoControllerCliente::class, 'success'])->name('mercadopago.success');

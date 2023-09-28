@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\cliente\sublimacion;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,38 @@ class SublimacionControllerCliente extends Controller
             ->whereIn('category_id', [6, 7, 8, 9, 10, 11])->orderBy('products.id', 'desc')->simplePaginate(8);
         return view('cliente.sublimacion.index', [
             'products' => $products
+        ]);
+    }
+
+    //MOSTRAR LOS PRODUCTOS LE PASAMOS EL MODELO QUE YA TIENE TODOS LOS CAMPOS DE SU TABLA
+    public function show(Product $product)
+    {
+        //echo "id: " . $product->id;
+        $slug = $product->nombre;
+        $categories = Category::whereNotIn('id', [6, 7, 8, 9, 10, 11])->get();
+
+        //CUANDO ES UN GET TE RETORNA UNA COLECCION DE DATOS
+        //ENTONCES TIENES QUE RECORRER ESOS DATOS POR MEDIO DE UN BUBLEW FOREACH()
+        //ASI TE DEVUELVA UN DATO O VARIOS DATOS
+        $product = Product::join('photos', 'photos.product_id', '=', 'products.id')
+            ->select(
+                'products.id',
+                'products.descripcion',
+                'products.slug',
+                'products.stock',
+                'products.nombre',
+                'products.precio',
+                'photos.foto_uno',
+                'photos.foto_dos',
+                'photos.foto_tres'
+            )->where('products.precio', '>', 0)
+            ->whereNotIn('category_id', [6, 7, 8, 9, 10, 11])
+            ->where('products.id', '=', $product->id)->get();
+
+        return view('cliente.producto.show', [
+            'product' => $product,
+            'slug' => $slug,
+            'categories' => $categories
         ]);
     }
 }
