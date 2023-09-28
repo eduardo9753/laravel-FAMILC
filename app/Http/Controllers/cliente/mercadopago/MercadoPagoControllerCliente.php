@@ -18,6 +18,23 @@ class MercadoPagoControllerCliente extends Controller
     //CREAR EL BOTON DE MERCADOPAGO
     public function pay(Request $request)
     {
+        //validando stock del producto
+        //ARREGLO DE DATOS PARA VALIDAR EL STOCK
+        $product_id = $request->product_id;
+        $cantidad = $request->cantidad;
+        $contStock = 0;
+        while ($contStock < count($product_id)) {
+            //BUSCAMOS AL PRODUCTO POR ID Y VALIDAMOS EL STOCK
+            $producto = Product::find($product_id[$contStock]);
+            $stock_actual = $producto->stock;
+            if ($stock_actual <= $cantidad[$contStock]) { //<
+                return response()->json(['code' => 2, 'msg' => $producto->nombre,]);
+            }
+            $contStock = $contStock + 1;
+        }
+
+
+
         /* Agrega credenciales*/
         SDK::setAccessToken(config('mercadopago.token'));
         $public_key = config('mercadopago.public_key');
@@ -117,7 +134,7 @@ class MercadoPagoControllerCliente extends Controller
             $sale->fecha = date('Y-m-d H:i:s');
             $sale->inpuesto = 18;
             $sale->total_venta =  $requestData['total_venta'];
-            $sale->estado = 'CANCELADO';
+            $sale->estado = 'PAGADO';
             $sale->save();
 
 

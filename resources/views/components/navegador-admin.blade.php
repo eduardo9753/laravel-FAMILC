@@ -45,11 +45,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Pedidos
+                            Ventas
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="{{ route('admin.sale.index') }}">Pedidos por Entregar</a></li>
-                            <li><a class="dropdown-item" href="{{ route('admin.sale.list') }}">Pedidos Pagados</a></li>
+                            {{-- <li><a class="dropdown-item" href="{{ route('admin.sale.index') }}">Pedidos por Entregar</a></li> --}}
+                            <li><a class="dropdown-item" href="{{ route('admin.sale.list') }}">Ventas Pagados</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

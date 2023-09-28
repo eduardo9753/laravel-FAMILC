@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    //(9)ENVIAR DATOS POR AJAX Y GUARDAR LA INFORMACION EN LA BASE DE DATOS
+    /*(9)ENVIAR DATOS POR AJAX Y GUARDAR LA INFORMACION DEL PEDIDO EN LA BASE DE DATOS
     $('#form-cart-venta').on('click', '#guardar-datos-venta', function (e) {
         e.preventDefault();
 
@@ -96,7 +96,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-    });
+    });*/
 
 
     //(4)SUMAR CANTIDAD AL PRODUCTO CUANDO PRESIONEMOS EL BOTON "+"

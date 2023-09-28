@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Mail;
 class SaleControllerCliente extends Controller
 {
     //FUNCION QUE GUARDA AL CLIENTE - A LA VENTA Y DETALLE VENTA
+    //por ahora esta funcion ya no estara disponible, ya que se
+    //integro mercadopago para compras directas
     public function store(Request $request)
     {
         //ARREGLO DE DATOS PARA VALIDAR EL STOCK

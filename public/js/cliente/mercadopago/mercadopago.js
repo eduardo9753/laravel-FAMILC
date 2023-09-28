@@ -17,36 +17,41 @@ window.addEventListener('DOMContentLoaded', () => {
                 dataType: "JSON",
 
                 beforeSend: function () {
-                    $('#form-cart-venta').find('#guardar-datos-venta').attr('disabled', true);
+                    //$('#form-cart-venta').find('#guardar-datos-venta').attr('disabled', true);
                     $('#form-cart-venta').find('#guardar-datos-venta-compra').attr('disabled', true);
                 }, //desabilitamos
 
                 success: function (data) {
                     console.log('Datos Preference: ', data.msg);
-                    //CREANDO EL BOTON DE PAGO MERCADOPAGO
-                    const mp = new MercadoPago(data.msg.public_key);
-                    mp.bricks().create("wallet", "wallet_container", {
-                        initialization: {
-                            preferenceId: data.msg.preference_id,
-                            redirectMode: "self",
-                            //redirectMode: "modal"
-                        },
-                        callbacks: {
-                            onReady: () => { },
-                            onSubmit: () => { },
-                            onError: (error) => console.error('error arrojado', error),
-                        },
-                        customization: {
-                            visual: {
-                                buttonBackground: 'black',
-                                borderRadius: '16px',
+                    if (data.code == 2) {
+                        alerta(data.msg + ' excede a nuestro stock actual', 'error', 2500);
+                        form.find('#guardar-datos-venta-compra').attr('disabled', false); //habilitamos
+                    } else {
+                        //CREANDO EL BOTON DE PAGO MERCADOPAGO
+                        const mp = new MercadoPago(data.msg.public_key);
+                        mp.bricks().create("wallet", "wallet_container", {
+                            initialization: {
+                                preferenceId: data.msg.preference_id,
+                                redirectMode: "self",
+                                //redirectMode: "modal"
                             },
-                            texts: {
-                                action: 'pay',
-                                valueProp: 'security_details',
+                            callbacks: {
+                                onReady: () => { },
+                                onSubmit: () => { },
+                                onError: (error) => console.error('error arrojado', error),
                             },
-                        },
-                    });
+                            customization: {
+                                visual: {
+                                    buttonBackground: 'black',
+                                    borderRadius: '16px',
+                                },
+                                texts: {
+                                    action: 'pay',
+                                    valueProp: 'security_details',
+                                },
+                            },
+                        });
+                    }
                 }
             });
         }

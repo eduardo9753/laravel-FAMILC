@@ -57,14 +57,15 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" style="font-size: 25px" class="boton-sin-color mb-2 input-carrito mt-1"
-                                        value="0" name="total_venta" id="total_venta" readonly>
+                                    <input type="text" style="font-size: 25px"
+                                        class="boton-sin-color mb-2 input-carrito mt-1" value="0" name="total_venta"
+                                        id="total_venta" readonly>
                                 </div>
 
                                 <div class="col-md-6">
                                     <form id="form-cart-comprar" action="{{ route('cart.create') }}" method="GET">
                                         <input type="submit"id="boton-comprar" class="boton boton-color w-100"
-                                            value="Comprar">
+                                            value="Generar Compra">
                                     </form>
                                 </div>
                             </div>

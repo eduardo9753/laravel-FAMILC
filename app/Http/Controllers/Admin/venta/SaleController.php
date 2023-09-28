@@ -11,7 +11,8 @@ use Illuminate\Http\Request;
 
 class SaleController extends Controller
 {
-    //
+    //por ahora esta funcion ya no estara disponible, ya que se
+    //integro mercadopago para compras directas
     public function index()
     {
         $sales = Sale::join('people', 'people.id', '=', 'sales.person_id')
@@ -30,7 +31,8 @@ class SaleController extends Controller
         ]);
     }
 
-
+    //por ahora esta funcion ya no estara disponible, ya que se
+    //integro mercadopago para compras directas
     public function show($id)
     {
         $sales = Sale::find($id);
@@ -44,7 +46,9 @@ class SaleController extends Controller
         ]);
     }
 
-    //funcion para actualizar al cliente - venta y actualizar estock producto
+    //funcion para actualizar la compra del cliente - venta y actualizar estock producto
+    //por ahora esta funcion ya no estara disponible, ya que se
+    //integro mercadopago para compras directas
     public function update($id, Request $request)
     {
         //dato venta por id
@@ -64,7 +68,7 @@ class SaleController extends Controller
 
 
 
-        //SI SALTA A QUI ACTULIZAMOS LOS DATOS DE LA VENTA
+        //SI SALTA A QUI ACTULIZAMOS LOS DATOS DE LA VENTA - CLIENTE Y STOCK PRODUCTO
         $saleDetail = SaleDetail::where('sale_id', '=', $sales->id)->get();
         $people = Person::find($sales->person_id);
         $update = $sales->update([
@@ -108,7 +112,7 @@ class SaleController extends Controller
                 'sales.total_venta',
                 'sales.estado',
             )
-            ->where('sales.estado', '=', 'CANCELADO')->orderBy('sales.id', 'desc')->get();
+            ->where('sales.estado', '=', 'PAGADO')->orderBy('sales.id', 'desc')->get();
         return view('admin.venta.list', [
             'sales' => $sales
         ]);

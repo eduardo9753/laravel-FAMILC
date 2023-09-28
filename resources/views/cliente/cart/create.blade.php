@@ -127,12 +127,12 @@
                             </div>
 
                             <div class="d-flex justify-content-between">
-                                <div>
-                                    <button type="submit" name="" id="guardar-datos-venta"
-                                        class="boton boton-color w-100 mt-4">
-                                        Generar Pedido
-                                    </button>
-                                </div>
+                                <!--<div>
+                                        <button type="submit" name="" id="guardar-datos-venta"
+                                            class="boton boton-color w-100 mt-4">
+                                            Generar Pedido
+                                        </button>
+                                    </div>-->
 
                                 <div>
                                     <button type="submit" name="" id="guardar-datos-venta-compra"

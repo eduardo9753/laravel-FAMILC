@@ -29,7 +29,7 @@
                 @foreach ($products as $product)
                     <div class="taza">
                         <div class="taza-img">
-                            <a href="{{ route('product.show', ['product' => $product]) }}">
+                            <a href="{{ route('sublimacion.show', ['product' => $product]) }}">
                                 <img src="{{ $product->foto_uno }}" alt="{{ $product->foto_uno }}">
                             </a>
 
