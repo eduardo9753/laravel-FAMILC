@@ -7,9 +7,9 @@
 
 
     <meta name="keywords"
-        content="tazas, TAZAS, tazas porsonalizadas, TAZAS PERSONALIZADAS, cuadros, CUADROS, cuadro, CUADRO, polos, polos sublimados, polos perzonalizados, polos estampados, sublimacion de tazas, diseños, gorros, botellas, tomatodos, logos, regalos, perzonalizados, tazas con fotos, tazas sublimadas, cuadros con fotos, cuadros sublimados, FAMILC, FAMILC SAC , familc, familc sac">
+        content="tazas, TAZAS, kawaii,tazas porsonalizadas, TAZAS PERSONALIZADAS, cuadros, CUADROS, cuadro, CUADRO, polos, polos sublimados, polos perzonalizados, polos estampados, sublimacion de tazas, diseños, gorros, botellas, tomatodos, logos, regalos, perzonalizados, tazas con fotos, tazas sublimadas, cuadros con fotos, cuadros sublimados, FAMILC, FAMILC SAC , familc, familc sac">
     <meta name="description"
-        content="Tienda de productos personalizados, aqui encontraras distintos tipos de productos diseñados y podras tambien tu fotografias para retratarlos en los siguientes productos  - Tazas , Polos , Cuadro Roca , Tazas Chop">
+        content="Tienda de productos personalizados y venta de productos, aqui encontraras distintos tipos de productos diseñados y podras compartir fotografias para retratarlos en los siguientes productos  - Tazas , Polos , Cuadro Roca , Tazas Chop">
 
     <title>FAMILC</title>
 

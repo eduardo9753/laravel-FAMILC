@@ -109,7 +109,7 @@ class MercadopagoWebHookControllerCliente extends Controller
                         localStorage.clear(); 
             
                         if(carrito_entrada.length <= 0){
-                           alert('carrito vacio')
+                           console.log('carrito vacio')
                         }
                     </script>";
                 } else {
