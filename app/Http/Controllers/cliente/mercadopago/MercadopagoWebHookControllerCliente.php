@@ -83,9 +83,6 @@ class MercadopagoWebHookControllerCliente extends Controller
             }
 
             if ($save) {
-                // Limpia los datos del $request de la sesión (opcional)
-                session()->forget('data');
-
                 $pay = Pay::create([
                     'sale_id' => $sale->id,
                     'collection_id' => $request->collection_id,
@@ -112,6 +109,8 @@ class MercadopagoWebHookControllerCliente extends Controller
                            console.log('carrito vacio')
                         }
                     </script>";
+                    // Limpia los datos del $request de la sesión
+                    session()->forget('data');
                 } else {
                     Log::info("No se realizó el pago correctamente");
                 }

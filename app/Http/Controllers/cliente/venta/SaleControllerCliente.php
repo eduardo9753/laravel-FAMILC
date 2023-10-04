@@ -78,8 +78,7 @@ class SaleControllerCliente extends Controller
         }
 
         if ($save) {
-            /*Mail::to(['j.a_alarcon_24@outlook.com', 'nsnyliz@gmail.com', 'Huamanirosase@gmail.com', 'nunezcancharimabell@gmail.com'])->send(new AdminMail($request->nombres, $request->total_venta, $request->telefono));
-            Mail::to($person->email)->send(new UsuarioMail($request->nombres, $request->total_venta, $request->telefono));*/
+            Mail::to(['j.a_alarcon_24@outlook.com', 'nsnyliz@gmail.com', 'Huamanirosase@gmail.com', 'nunezcancharimabell@gmail.com'])->send(new AdminMail($request->nombres, $request->total_venta, $request->telefono));
             Mail::to($person->email)->send(new UsuarioMail($request->nombres, $request->total_venta, $request->telefono));
             return response()->json([
                 'code' => 1,

@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\cliente\mercadopago;
 
 use App\Http\Controllers\Controller;
+use App\Mail\AdminMail;
+use App\Mail\UsuarioMail;
 use App\Models\Pay;
 use App\Models\Person;
 use App\Models\Product;
 use App\Models\Sale;
 use App\Models\SaleDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use MercadoPago\SDK;
 use MercadoPago\Preference;
 use MercadoPago\Item;
@@ -157,9 +160,6 @@ class MercadoPagoControllerCliente extends Controller
             }
 
             if ($save) {
-                // Limpia los datos del $request de la sesión (opcional)
-                session()->forget('data');
-
                 $pay = Pay::create([
                     'sale_id' => $sale->id,
                     'collection_id' => $request->collection_id,
@@ -177,6 +177,10 @@ class MercadoPagoControllerCliente extends Controller
                 ]);
 
                 if ($pay) {
+                    Mail::to(['j.a_alarcon_24@outlook.com', 'nsnyliz@gmail.com', 'Huamanirosase@gmail.com', 'nunezcancharimabell@gmail.com'])->send(new AdminMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
+                    Mail::to($person->email)->send(new UsuarioMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
+                    // Limpia los datos del $request de la sesión
+                    session()->forget('data');
                     return redirect()->route('home')->with('pay', "se genero su compra: " . $person->nombres . "");
                 } else {
                     return redirect()->route('home')->with('nopay', 'No se realizó el pago correctamente');
