@@ -177,7 +177,7 @@ class MercadoPagoControllerCliente extends Controller
                 ]);
 
                 if ($pay) {
-                    Mail::to(['j.a_alarcon_24@outlook.com', 'nsnyliz@gmail.com', 'Huamanirosase@gmail.com', 'nunezcancharimabell@gmail.com'])->send(new AdminMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
+                    //Mail::to(['j.a_alarcon_24@outlook.com', 'nsnyliz@gmail.com', 'Huamanirosase@gmail.com', 'nunezcancharimabell@gmail.com'])->send(new AdminMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
                     Mail::to($person->email)->send(new UsuarioMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
                     // Limpia los datos del $request de la sesión
                     session()->forget('data');

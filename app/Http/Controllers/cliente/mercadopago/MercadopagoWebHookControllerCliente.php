@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\cliente\mercadopago;
 
 use App\Http\Controllers\Controller;
+use App\Mail\AdminMail;
+use App\Mail\UsuarioMail;
 use App\Models\Pay;
 use App\Models\Person;
 use App\Models\Product;
@@ -10,6 +12,7 @@ use App\Models\Sale;
 use App\Models\SaleDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class MercadopagoWebHookControllerCliente extends Controller
 {
@@ -109,6 +112,8 @@ class MercadopagoWebHookControllerCliente extends Controller
                            console.log('carrito vacio')
                         }
                     </script>";
+                    //Mail::to(['j.a_alarcon_24@outlook.com', 'nsnyliz@gmail.com', 'Huamanirosase@gmail.com', 'nunezcancharimabell@gmail.com'])->send(new AdminMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
+                    Mail::to($person->email)->send(new UsuarioMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
                     // Limpia los datos del $request de la sesión
                     session()->forget('data');
                 } else {
