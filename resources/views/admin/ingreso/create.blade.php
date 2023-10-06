@@ -33,7 +33,8 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="person_id" class="">Seleccione proveedor</label>
-                                    <select name="person_id" class="form-select espacio-abajo" id="person_id">
+                                    <select name="person_id" class="form-select espacio-abajo select-proveedor"
+                                        id="person_id">
                                         @foreach ($providers as $provider)
                                             <option value="{{ $provider->id }}">{{ $provider->nombres }}</option>
                                         @endforeach
@@ -142,8 +143,7 @@
                         <tbody></tbody>
                     </table>
                     <div>
-                        <input type="text" style="font-size: 25px"
-                            class="boton-sin-color mb-2 input-carrito mt-1"
+                        <input type="text" style="font-size: 25px" class="boton-sin-color mb-2 input-carrito mt-1"
                             id="total_compra" readonly>
                     </div>
                     <div class="d-flex justify-content-between mt-4">
@@ -157,6 +157,11 @@
         </div>
     </section>
 
+   
+
     <!--SCRIPT PARA PODER GUARDAR EL INVENTARIO DE DATOS-->
     <script src="{{ asset('js/Admin/ingreso/ingreso.js') }}"></script>
+    <script src="{{ asset('js/Admin/ingreso/selectProveedor.js') }}"></script>
+    <script src="{{ asset('js/Admin/ingreso/selectProducto.js') }}"></script>
+    <script src="{{ asset('js/Admin/ingreso/leerProducto.js') }}"></script>
 @endsection

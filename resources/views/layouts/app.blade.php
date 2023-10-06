@@ -13,6 +13,14 @@
 
     <title>FAMILC</title>
 
+    <!-- CDN JQUERY -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    {{-- SELECT2 BUSCADOR SELECT --}}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,7 +85,6 @@
     <link rel="stylesheet" href="{{ asset('css/admin/producto/producto.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/categoria/categoria.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/dashboard.css') }}">
-
 </head>
 
 <body>
@@ -118,9 +125,7 @@
     </script>
     -->
 
-    <!-- CDN JQUERY -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 
     <!-- javascript OWL CAROUSEL LIB-->
     <script src="{{ asset('lib/owl/dist/owl.carousel.js') }}"></script>

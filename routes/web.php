@@ -46,7 +46,7 @@ Route::get('/cart/list', [CartController::class, 'index'])->name('cart.index');
 Route::get('/cart/list/checkout', [CartController::class, 'create'])->name('cart.create');
 Route::post('/cart/list/shopping', [SaleControllerCliente::class, 'store'])->name('cart.store');
 Route::get('/sublimacion/producto', [SublimacionControllerCliente::class, 'index'])->name('product.sublimacion');
-Route::get('/sublimacion/show/{product:slug}', [SublimacionControllerCliente::class , 'show'])->name('sublimacion.show');
+Route::get('/sublimacion/show/{product:slug}', [SublimacionControllerCliente::class, 'show'])->name('sublimacion.show');
 
 
 
@@ -89,7 +89,7 @@ Route::put('/admin/category/update/{category}', [CategoryController::class, 'upd
 Route::get('/admin/income', [IncomeController::class, 'index'])->name('admin.income.index');
 Route::get('/admin/income/create', [IncomeController::class, 'create'])->name('admin.income.create');
 Route::post('/admin/income/store', [IncomeController::class, 'store'])->name('admin.income.store');
-
+Route::get('/admin/income/fectProducto', [IncomeController::class, 'fectProducto'])->name('admin.income.fectProducto');
 
 
 Route::get('/admin/sales', [SaleController::class, 'index'])->name('admin.sale.index');

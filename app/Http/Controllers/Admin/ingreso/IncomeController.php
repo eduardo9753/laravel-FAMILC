@@ -15,17 +15,17 @@ class IncomeController extends Controller
     public function index()
     {
         $incomes = Income::join('people', 'people.id', '=', 'incomes.person_id')
-        ->select(
-            'people.nombres',
-            'people.direccion',
-            'people.telefono',
-            'people.email',
-            'incomes.id',
-            'incomes.total_compra',
-            'incomes.estado',
-        )
-        ->where('incomes.estado', '=', 'INGRESADO')->get();
-        return view('admin.ingreso.index' ,[
+            ->select(
+                'people.nombres',
+                'people.direccion',
+                'people.telefono',
+                'people.email',
+                'incomes.id',
+                'incomes.total_compra',
+                'incomes.estado',
+            )
+            ->where('incomes.estado', '=', 'INGRESADO')->get();
+        return view('admin.ingreso.index', [
             'incomes' => $incomes
         ]);
     }
@@ -100,5 +100,16 @@ class IncomeController extends Controller
                 'msg' => 'Hubo un error en el registro de su ingreso'
             ]);
         }
+    }
+
+    public function fectProducto(Request $request)
+    {
+        //$request->id_producto
+        $products = Product::join('income_details', 'income_details.product_id', '=', 'products.id')
+            ->where('products.id', '=', $request->id_producto)->first(); //me devuelve solo el primer registro de los muchos
+        return response()->json([
+            'code' => 1,
+            'result' => $products
+        ]);
     }
 }
