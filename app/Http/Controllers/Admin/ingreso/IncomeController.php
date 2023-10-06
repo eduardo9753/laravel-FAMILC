@@ -33,7 +33,7 @@ class IncomeController extends Controller
     public function create()
     {
         $providers = Person::where('tipo_persona', '=', 'PROVEEDOR')->get();
-        $products = Product::whereNotIn('category_id',[6,7,8,9,10,11])->get();
+        $products = Product::whereNotIn('category_id', [6, 7, 8, 9, 10, 11])->get();
         return view('admin.ingreso.create', [
             'providers' => $providers,
             'products' => $products
@@ -107,6 +107,12 @@ class IncomeController extends Controller
         //$request->id_producto
         $products = Product::join('income_details', 'income_details.product_id', '=', 'products.id')
             ->where('products.id', '=', $request->id_producto)->first(); //me devuelve solo el primer registro de los muchos
+
+        if (!isset($products)) {
+            $products = Product::find($request->id_producto);
+        } else {
+            $products = $products;
+        }
         return response()->json([
             'code' => 1,
             'result' => $products
