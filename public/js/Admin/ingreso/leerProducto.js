@@ -1,7 +1,7 @@
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    $("#product_id").change(function () {
+    $("#product_id").click(function () {
         id_producto = $('select[id=product_id]').val()
         console.log(id_producto);
 
