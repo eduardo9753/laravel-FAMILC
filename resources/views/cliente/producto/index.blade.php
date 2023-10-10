@@ -48,7 +48,7 @@
                                     class="boton boton-color mt-3 mb-3">Saber más</a>
                             @else
                                 <a href="{{ route('product.show', ['product' => $product]) }}"
-                                    class="boton boton-color mt-3 mb-3">Saber más</a>
+                                    class="boton boton-sin-color mt-3 mb-3">Saber más</a>
 
                                 @if ($product->stock == 0)
                                     <a class="boton boton-sin-color mb-3">Agotado</a>
