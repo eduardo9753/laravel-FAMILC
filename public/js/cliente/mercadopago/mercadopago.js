@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 success: function (data) {
                     console.log('Datos Preference: ', data.msg);
                     if (data.code == 2) {
-                        alerta(data.msg + ' excede a nuestro stock actual', 'error', 2500);
+                        alerta(data.msg + ' excede a nuestro stock actual', 'info', 2500);
                         form.find('#guardar-datos-venta-compra').attr('disabled', false); //habilitamos
                     } else {
                         //CREANDO EL BOTON DE PAGO MERCADOPAGO
