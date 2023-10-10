@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 <!-- <a class="boton secondary play">Play</a>
-                                                                                                                                                            <a class="boton secondary stop">Stop</a>-->
+                                                                                                                                                                    <a class="boton secondary stop">Stop</a>-->
             </div>
         </div>
     </section>
@@ -148,18 +148,20 @@
         </div>
 
         <div class="contenedor">
-            <div class="taza-grid">
+            <div class="taza-grid mt-4">
                 @foreach ($products as $product)
                     <div class="taza">
                         <div class="taza-img">
                             <a href="{{ route('product.show', ['product' => $product]) }}">
                                 <img src="{{ $product->foto_uno }}" alt="{{ $product->foto_uno }}">
                             </a>
+
                             <div class="taza-color-mitad"></div>
                         </div>
 
                         <div class="taza-descripcion">
                             <h2>{{ $product->nombre }}</h2>
+                            <p class="tamanio-precio boton-sin-color">{{ $product->precio }}</p>
                             @if ($product->category_id == 6)
                                 <a target="_blank"
                                     href="https://wa.me/51952955205?text=Quisiera más información del producto - Codigo:{{ $product->id }} - {{ $product->descripcion }}"
