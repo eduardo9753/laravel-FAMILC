@@ -33,7 +33,7 @@ class IncomeController extends Controller
     public function create()
     {
         $providers = Person::where('tipo_persona', '=', 'PROVEEDOR')->get();
-        $products = Product::whereNotIn('category_id', [6, 7, 8, 9, 10, 11])->get();
+        $products = Product::all();
         return view('admin.ingreso.create', [
             'providers' => $providers,
             'products' => $products

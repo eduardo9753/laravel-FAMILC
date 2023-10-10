@@ -104,7 +104,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //ESTE ES UN OBJETO POR ESO SE PASA DE FRENTE A LA VISTA
-        $category = Category::whereNotIn('id',[6])->get();
+        $category = Category::all();
         $categoria_producto = Category::find($product->category_id);
         return view('admin.producto.show', [
             'product' => $product,

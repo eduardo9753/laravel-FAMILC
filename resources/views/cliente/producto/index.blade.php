@@ -39,15 +39,22 @@
                         <div class="taza-descripcion">
                             <h2>{{ $product->nombre }}</h2>
                             <p class="tamanio-precio boton-sin-color">{{ $product->precio }}</p>
-                            <a href="{{ route('product.show', ['product' => $product]) }}"
-                                class="boton boton-color mt-3">saber
-                                mas</a>
-                            @if ($product->stock >= 1)
-                                <a href="#" class="agregar-carrito boton boton-sin-color mb-3"
-                                    data-id="{{ $product->id }}">Agregar<i class='bx bx-cart-add bx-flip-vertical bx-tada'
-                                        style='color:#a205a1'></i></a>
+                            @if ($product->category_id == 6)
+                                <a target="_blank"
+                                    href="https://wa.me/51952955205?text=Quisiera más información del producto - Codigo:{{ $product->id }} - {{ $product->descripcion }}"
+                                    class="boton boton-color mt-3 mb-3">Whatsapp</a>
                             @else
-                                <a class="boton boton-sin-color mb-3">Agotado</a>
+                                <a target="_blank"
+                                    href="https://wa.me/51952955205?text=Quisiera más información del producto - Codigo:{{ $product->id }} - {{ $product->descripcion }}"
+                                    class="boton boton-color mt-3 mb-3">Whatsapp</a>
+
+                                @if ($product->stock == 0)
+                                    <a class="boton boton-sin-color mb-3">Agotado</a>
+                                @else
+                                    <a href="#" class="agregar-carrito boton boton-sin-color mb-3"
+                                        data-id="{{ $product->id }}">Agregar<i
+                                            class='bx bx-cart-add bx-flip-vertical bx-tada' style='color:#a205a1'></i></a>
+                                @endif
                             @endif
                         </div>
                     </div>

@@ -28,7 +28,7 @@ class CategoryController extends Controller
     //FUNCION INDEX "TABLA DE DATOS CATEGORIA"
     public function index()
     {
-        $category  = Category::whereNotIn('id',[6,7,8,9,10,11])->get();
+        $category  = Category::all();
         return view('admin.categoria.index', [
             'category' => $category
         ]);
