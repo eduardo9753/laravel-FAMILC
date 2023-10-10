@@ -45,7 +45,7 @@
                                     class="boton boton-color mt-3 mb-3">Whatsapp</a>
 
                                 <a href="{{ route('product.show', ['product' => $product]) }}"
-                                    class="boton boton-color mt-3 mb-3">Saber más</a>
+                                    class="boton boton-sin-color mt-3 mb-3">Saber más</a>
                             @else
                                 <a href="{{ route('product.show', ['product' => $product]) }}"
                                     class="boton boton-color mt-3 mb-3">Saber más</a>
