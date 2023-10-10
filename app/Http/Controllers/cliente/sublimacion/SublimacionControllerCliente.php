@@ -24,7 +24,7 @@ class SublimacionControllerCliente extends Controller
                 'photos.foto_dos',
                 'photos.foto_tres'               //VARIABLE QUE ESTA EN EL HOME [1-5]
             )->where('products.precio', '>', 0)
-            ->whereIn('category_id', [6, 7, 8, 9, 10, 11])->orderBy('products.id', 'desc')->simplePaginate(8);
+            ->whereIn('category_id', [6])->orderBy('products.id', 'desc')->simplePaginate(8);
         return view('cliente.sublimacion.index', [
             'products' => $products
         ]);
@@ -35,7 +35,7 @@ class SublimacionControllerCliente extends Controller
     {
         //echo "id: " . $product->id;
         $slug = $product->nombre;
-        $categories = Category::whereNotIn('id', [6, 7, 8, 9, 10, 11])->get();
+        $categories = Category::whereNotIn('id', [6])->get();
 
         //CUANDO ES UN GET TE RETORNA UNA COLECCION DE DATOS
         //ENTONCES TIENES QUE RECORRER ESOS DATOS POR MEDIO DE UN BUBLEW FOREACH()
@@ -52,7 +52,7 @@ class SublimacionControllerCliente extends Controller
                 'photos.foto_dos',
                 'photos.foto_tres'
             )->where('products.precio', '>', 0)
-            ->whereIn('category_id', [6, 7, 8, 9, 10, 11])
+            ->whereIn('category_id', [6])
             ->where('products.id', '=', $product->id)->get();
 
         return view('cliente.sublimacion.show', [

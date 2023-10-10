@@ -44,7 +44,7 @@ class ProductController extends Controller
         FROM products p 
         INNER JOIN categories c ON p.category_id = c.id
         INNER JOIN users u ON p.user_id = u.id
-        where c.id NOT IN(6,7,8,9,10,11)');
+        where c.id NOT IN(6)');
 
         return view('admin.producto.index', [
             'product' => $product
@@ -53,7 +53,7 @@ class ProductController extends Controller
 
     public function create()
     {
-        $category = Category::whereNotIn('id',[6,7,8,9,10,11])->get();
+        $category = Category::whereNotIn('id',[6])->get();
         return view('admin.producto.create', [
             'category' => $category
         ]);
@@ -105,7 +105,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //ESTE ES UN OBJETO POR ESO SE PASA DE FRENTE A LA VISTA
-        $category = Category::whereNotIn('id',[6,7,8,9,10,11])->get();
+        $category = Category::whereNotIn('id',[6])->get();
         $categoria_producto = Category::find($product->category_id);
         return view('admin.producto.show', [
             'product' => $product,
