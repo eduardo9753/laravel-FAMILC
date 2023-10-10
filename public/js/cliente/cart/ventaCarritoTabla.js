@@ -158,7 +158,7 @@ window.addEventListener('DOMContentLoaded', () => {
               <td class="text-center"><input type="text" class="input-carrito-tamanio-uno text-center input-carrito product_id" name="product_id[]" value="${venta.product_id}" readonly> </td>
               <td class="text-center"><img class="img-cart" src="${venta.imagen}" alt=""></td>
               <td class="text-center">${venta.nombre}</td>
-              <td class=""><input type="text" class="input-carrito-tamanio-uno text-center input-carrito precio_venta" name="precio_venta[]" value="${venta.precio_venta}" readonly> </td>
+              <td class="text-center"><input type="text" class="input-carrito-tamanio-uno text-center input-carrito precio_venta" name="precio_venta[]" value="${venta.precio_venta}" readonly> </td>
               <td class="text-center">
               <input type="submit" class="btn btn-success" id="sumar-cantidad-btn" value="+"> 
               <input type="text" class="input-carrito-tamanio-uno text-center input-carrito cantidad" name="cantidad[]" value="${venta.cantidad}" readonly> 
