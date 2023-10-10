@@ -161,7 +161,7 @@
     <script src="{{ asset('js/cliente/cart/venta.js') }}"></script>
 
     <!-- SCRIPT LIVEWIRE -->
-@livewireScripts
+    @livewireScripts
 
 </body>
 
