@@ -30,8 +30,13 @@
             <x-buscar-producto :categories="$categories" />
             --}}
 
-            {{-- COMPONENTE LIVEWIRE BUSCADOR --}}
-            @livewire('search')
+
+            <div class="card mt-1">
+                <div class="card-body">
+                    {{-- COMPONENTE LIVEWIRE BUSCADOR --}}
+                    @livewire('search')
+                </div>
+            </div>
 
             <div class="taza-grid mt-4">
                 @foreach ($aleatorios as $product)

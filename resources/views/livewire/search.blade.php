@@ -5,7 +5,7 @@
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping"><i class='bx bx-search' style='color:#f32125'></i></span>
                 <input wire:model="search" class="form-control me-2" type="search" name="search"
-                    placeholder="Buscar mis cursos" autocomplete="off">
+                    placeholder="Escriba el producto que desea buscar" autocomplete="off">
             </div>
         </div>
     </form>

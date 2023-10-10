@@ -91,8 +91,16 @@
                     </div>
                 @endforeach
             </div>
-            {{-- COMPONENTE BUSCAR PRODUCTO --}}
+            {{-- COMPONENTE BUSCAR PRODUCTO 
             <x-buscar-producto :categories="$categories" />
+            --}}
+
+            <div class="card mt-5">
+                <div class="card-body">
+                    {{-- COMPONENTE LIVEWIRE BUSCADOR --}}
+                    @livewire('search')
+                </div>
+            </div>
         </div>
     </section>
 
