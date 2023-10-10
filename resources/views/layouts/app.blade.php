@@ -88,8 +88,6 @@
 
     <!-- ESTILOS LIVEWIRE -->
     @livewireStyles
-    <!-- SCRIPT LIVEWIRE -->
-    @livewireScripts
 </head>
 
 <body>
@@ -162,7 +160,8 @@
     <script src="{{ asset('js/cliente/cart/limpiarCarrito.js') }}"></script>
     <script src="{{ asset('js/cliente/cart/venta.js') }}"></script>
 
-    
+    <!-- SCRIPT LIVEWIRE -->
+@livewireScripts
 
 </body>
 
