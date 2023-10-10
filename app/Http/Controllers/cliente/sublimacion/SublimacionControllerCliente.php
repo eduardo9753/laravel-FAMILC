@@ -20,44 +20,15 @@ class SublimacionControllerCliente extends Controller
                 'products.stock',
                 'products.nombre',
                 'products.precio',
+                'products.category_id',
                 'photos.foto_uno',
                 'photos.foto_dos',
                 'photos.foto_tres'               //VARIABLE QUE ESTA EN EL HOME [1-5]
             )->where('products.precio', '>', 0)
+            ->where('products.category_id', '=', 6)
             ->orderBy('products.id', 'desc')->simplePaginate(8);
         return view('cliente.sublimacion.index', [
             'products' => $products
-        ]);
-    }
-
-    //MOSTRAR LOS PRODUCTOS LE PASAMOS EL MODELO QUE YA TIENE TODOS LOS CAMPOS DE SU TABLA
-    public function show(Product $product)
-    {
-        //echo "id: " . $product->id;
-        $slug = $product->nombre;
-        $categories = Category::all();
-
-        //CUANDO ES UN GET TE RETORNA UNA COLECCION DE DATOS
-        //ENTONCES TIENES QUE RECORRER ESOS DATOS POR MEDIO DE UN BUBLEW FOREACH()
-        //ASI TE DEVUELVA UN DATO O VARIOS DATOS
-        $product = Product::join('photos', 'photos.product_id', '=', 'products.id')
-            ->select(
-                'products.id',
-                'products.descripcion',
-                'products.slug',
-                'products.stock',
-                'products.nombre',
-                'products.precio',
-                'photos.foto_uno',
-                'photos.foto_dos',
-                'photos.foto_tres'
-            )->where('products.precio', '>', 0)
-            ->where('products.id', '=', $product->id)->get();
-
-        return view('cliente.sublimacion.show', [
-            'product' => $product,
-            'slug' => $slug,
-            'categories' => $categories
         ]);
     }
 }

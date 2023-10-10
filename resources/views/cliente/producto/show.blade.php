@@ -82,16 +82,16 @@
                         <div class="taza-descripcion">
                             <h2>{{ $product->nombre }}</h2>
                             <p class="tamanio-precio boton-sin-color">{{ $product->precio }}</p>
-
-
                             @if ($product->category_id == 6)
                                 <a target="_blank"
                                     href="https://wa.me/51952955205?text=Quisiera más información del producto - Codigo:{{ $product->id }} - {{ $product->descripcion }}"
                                     class="boton boton-color mt-3 mb-3">Whatsapp</a>
+
+                                <a href="{{ route('product.show', ['product' => $product]) }}"
+                                    class="boton boton-color mt-3 mb-3">Saber más</a>
                             @else
-                                <a target="_blank"
-                                    href="https://wa.me/51952955205?text=Quisiera más información del producto - Codigo:{{ $product->id }} - {{ $product->descripcion }}"
-                                    class="boton boton-color mt-3 mb-3">Whatsapp</a>
+                                <a href="{{ route('product.show', ['product' => $product]) }}"
+                                    class="boton boton-color mt-3 mb-3">Saber más</a>
 
                                 @if ($product->stock == 0)
                                     <a class="boton boton-sin-color mb-3">Agotado</a>
