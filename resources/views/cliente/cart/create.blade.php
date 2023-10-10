@@ -110,8 +110,6 @@
                                                     <th scope="col" class="text-center">Descripcion</th>
                                                     <th scope="col" class="text-center">Precio</th>
                                                     <th scope="col" class="text-center">Cantidad</th>
-                                                    <th scope="col" class="text-center">+</th>
-                                                    <th scope="col" class="text-center">-</th>
                                                     <th scope="col" class="text-center">Subtotal</th>
                                                 </tr>
                                             </thead>
