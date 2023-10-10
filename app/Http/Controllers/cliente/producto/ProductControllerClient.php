@@ -23,6 +23,7 @@ class ProductControllerClient extends Controller
                 'products.stock',
                 'products.nombre',
                 'products.precio',
+                'products.category_id',
                 'photos.foto_uno',
                 'photos.foto_dos',
                 'photos.foto_tres'               //VARIABLE QUE ESTA EN EL HOME [1-5]
@@ -52,6 +53,7 @@ class ProductControllerClient extends Controller
                 'products.stock',
                 'products.nombre',
                 'products.precio',
+                'products.category_id',
                 'photos.foto_uno',
                 'photos.foto_dos',
                 'photos.foto_tres'
@@ -69,11 +71,12 @@ class ProductControllerClient extends Controller
                 'products.stock',
                 'products.nombre',
                 'products.precio',
+                'products.category_id',
                 'photos.foto_uno',
                 'photos.foto_dos',
                 'photos.foto_tres'           //LE PASAMOS EL ID DEL FORMULARIO DE BUSQUEDA
             )->where('products.precio', '>', 0)
-            ->inRandomOrder()->limit(3)->get();
+            ->inRandomOrder()->limit(4)->get();
 
 
         return view('cliente.producto.show', [
@@ -100,6 +103,7 @@ class ProductControllerClient extends Controller
                 'products.stock',
                 'products.nombre',
                 'products.precio',
+                'products.category_id',
                 'photos.foto_uno',
                 'photos.foto_dos',
                 'photos.foto_tres'           //LE PASAMOS EL ID DEL FORMULARIO DE BUSQUEDA

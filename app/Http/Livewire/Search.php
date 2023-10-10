@@ -18,9 +18,7 @@ class Search extends Component
     //METODO DE BUSQUEDA
     public function getResultsProperty()
     {
-        $products = Product::where('nombre', 'LIKE', '%' . $this->search . '%')
-            ->whereNotIn('category_id', [6, 7, 8, 9, 10, 11])
-            ->take(10)->get();
+        $products = Product::where('nombre', 'LIKE', '%' . $this->search . '%')->take(10)->get();
         return $products;
     }
 }
