@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Category;
 use Illuminate\View\Component;
 
 class FooterCliente extends Component
@@ -23,6 +24,9 @@ class FooterCliente extends Component
      */
     public function render()
     {
-        return view('components.footer-cliente');
+        $categories = Category::all();
+        return view('components.footer-cliente', [
+            'categories' => $categories
+        ]);
     }
 }
