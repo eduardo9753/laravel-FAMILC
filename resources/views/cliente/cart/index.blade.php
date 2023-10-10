@@ -12,7 +12,7 @@
 @section('header')
     <header id="header-producto">
         <div class="header-producto-descripcion">
-            <h1 class="titulo-header">Mi Carrito de Compras</h1>
+            <h1 class="titulo-header">Mi Lista</h1>
         </div>
     </header>
 @endsection
@@ -39,10 +39,8 @@
                                             <th scope="col" class="text-center">Item</th>
                                             <th scope="col" class="text-center">Imagen</th>
                                             <th scope="col" class="text-center">Descripcion</th>
-                                            <th scope="col" class="">Precio</th>
-                                            <th scope="col" class="">Cantidad</th>
-                                            <th scope="col" class="text-center">+</th>
-                                            <th scope="col" class="text-center">-</th>
+                                            <th scope="col" class="text-center">Precio</th>
+                                            <th scope="col" class="text-center">Cantidad</th>
                                             <th scope="col" class="text-center">Subtotal</th>
                                         </tr>
                                     </thead>
