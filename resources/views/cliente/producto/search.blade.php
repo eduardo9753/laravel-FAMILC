@@ -68,7 +68,7 @@
                                 @else
                                     <a href="#" class="agregar-carrito boton boton-color mb-3"
                                         data-id="{{ $product->id }}">Agregar<i
-                                            class='bx bx-cart-add bx-flip-vertical bx-tada' style='color:#a205a1'></i></a>
+                                            class='bx bx-cart-add bx-flip-vertical bx-tada' style='color:#fffeff'></i></a>
                                 @endif
                             @endif
                         </div>
