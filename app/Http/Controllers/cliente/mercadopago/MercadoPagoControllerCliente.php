@@ -180,8 +180,6 @@ class MercadoPagoControllerCliente extends Controller
                     //Mail::to(['j.a_alarcon_24@outlook.com', 'nsnyliz@gmail.com', 'Huamanirosase@gmail.com', 'nunezcancharimabell@gmail.com'])->send(new AdminMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
                     Mail::to($person->email)->send(new UsuarioMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
                     $person = Person::where('numero_documento', '=',  $requestData['numero_documento'])->first();
-                    // Limpia los datos del $request de la sesión
-                    session()->forget('data');
                     return redirect()->route('home')->with('pay', "se genero su compra: " . $person->nombres . "");
                 } else {
                     return redirect()->route('home')->with('nopay', 'No se realizó el pago correctamente');
