@@ -21,11 +21,11 @@ class HomeController extends Controller
                 'products.stock',
                 'products.nombre',
                 'products.precio',
+                'products.category_id',
                 'photos.foto_uno',
                 'photos.foto_dos',
                 'photos.foto_tres'           //LE PASAMOS EL ID DEL FORMULARIO DE BUSQUEDA
             )->where('products.precio', '>', 0)
-            ->whereIn('category_id', [6, 7, 8, 9, 10, 11])
             ->inRandomOrder()->limit(4)->get();
 
         //dd($product);
