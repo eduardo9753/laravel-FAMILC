@@ -26,11 +26,15 @@
     <section id="tazas" class="espacio-section-abajo">
         <div class="contenedor">
 
-            {{-- COMPONENTE BUSCAR PRODUCTO --}}
+            {{-- COMPONENTE BUSCAR PRODUCTO 
             <x-buscar-producto :categories="$categories" />
+            --}}
 
-            <div class="taza-grid">
-                @foreach ($products as $product)
+            {{-- COMPONENTE LIVEWIRE BUSCADOR --}}
+            @livewire('search')
+
+            <div class="taza-grid mt-4">
+                @foreach ($aleatorios as $product)
                     <div class="taza">
                         <div class="taza-img">
                             <a href="{{ route('product.show', ['product' => $product]) }}">
@@ -58,9 +62,6 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
-            <div class="mt-3">
-                {{ $products->withQueryString()->links() }}
             </div>
         </div>
     </section>

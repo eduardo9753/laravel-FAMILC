@@ -85,6 +85,9 @@
     <link rel="stylesheet" href="{{ asset('css/admin/producto/producto.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/categoria/categoria.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/dashboard.css') }}">
+
+    <!-- ESTILOS LIVEWIRE -->
+    @livewireStyles
 </head>
 
 <body>
@@ -157,7 +160,8 @@
     <script src="{{ asset('js/cliente/cart/limpiarCarrito.js') }}"></script>
     <script src="{{ asset('js/cliente/cart/venta.js') }}"></script>
 
-
+    <!-- SCRIPT LIVEWIRE -->
+    @livewireScripts
 
 </body>
 

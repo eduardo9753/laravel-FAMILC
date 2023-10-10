@@ -93,8 +93,9 @@ class ProductControllerClient extends Controller
         //LISTA DE CATEGORIAS
         $categories = Category::whereNotIn('id',[6,7,8,9,10,11])->get();
 
-        //LO RECORRIMOS CON UN FOREACH EN LA VISTA
-        $products = Product::join('photos', 'photos.product_id', '=', 'products.id')
+        //DATOS ALEATORIOS PARA MOSTRAR DISTINTOS PRODUCTOS
+        //RECORRIDO CON BUCLE FOR
+        $aleatorios = Product::join('photos', 'photos.product_id', '=', 'products.id')
             ->select(
                 'products.id',
                 'products.descripcion',
@@ -107,10 +108,10 @@ class ProductControllerClient extends Controller
                 'photos.foto_tres'           //LE PASAMOS EL ID DEL FORMULARIO DE BUSQUEDA
             )->where('products.precio', '>', 0)
             ->whereNotIn('category_id',[6,7,8,9,10,11])
-            ->where('products.category_id', '=', $request->categoria)->orderBy('products.id', 'desc')->simplePaginate(6);
+            ->inRandomOrder()->limit(4)->get();
 
         return view('cliente.producto.search', [
-            'products' => $products,
+            'aleatorios' => $aleatorios,
             'categories' => $categories
         ]);
     }
