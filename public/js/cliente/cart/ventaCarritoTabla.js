@@ -154,9 +154,9 @@ window.addEventListener('DOMContentLoaded', () => {
             const subTotal = venta.precio_venta * venta.cantidad;
             Total = Total + subTotal;
             row.innerHTML = `
-              <td><a class="boton boton-color" id="eliminar-ingreso-btn" data-id="${venta.product_id}">X</a></td>
-              <td class=""><input type="text" class="input-carrito-tamanio-uno text-center input-carrito product_id" name="product_id[]" value="${venta.product_id}" readonly> </td>
-              <td><img class="img-cart" src="${venta.imagen}" alt=""></td>
+              <td class="text-center"><a class="btn btn-danger" id="eliminar-ingreso-btn" data-id="${venta.product_id}">X</a></td>
+              <td class="text-center"><input type="text" class="input-carrito-tamanio-uno text-center input-carrito product_id" name="product_id[]" value="${venta.product_id}" readonly> </td>
+              <td class="text-center"><img class="img-cart" src="${venta.imagen}" alt=""></td>
               <td class="text-center">${venta.nombre}</td>
               <td class=""><input type="text" class="input-carrito-tamanio-uno text-center input-carrito precio_venta" name="precio_venta[]" value="${venta.precio_venta}" readonly> </td>
               <td class=""><input type="text" class="input-carrito-tamanio-uno text-center input-carrito cantidad" name="cantidad[]" value="${venta.cantidad}" readonly> </td>
