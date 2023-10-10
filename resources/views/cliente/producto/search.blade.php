@@ -13,7 +13,7 @@
 @section('header')
     <header id="header-producto">
         <div class="header-producto-descripcion">
-            <h1 class="titulo-header">Seleccione categoria</h1>
+            <h1 class="titulo-header">Buscador</h1>
         </div>
     </header>
 @endsection
