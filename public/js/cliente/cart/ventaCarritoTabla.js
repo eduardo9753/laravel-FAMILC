@@ -160,8 +160,8 @@ window.addEventListener('DOMContentLoaded', () => {
               <td class="text-center">${venta.nombre}</td>
               <td class=""><input type="text" class="input-carrito-tamanio-uno text-center input-carrito precio_venta" name="precio_venta[]" value="${venta.precio_venta}" readonly> </td>
               <td class=""><input type="text" class="input-carrito-tamanio-uno text-center input-carrito cantidad" name="cantidad[]" value="${venta.cantidad}" readonly> </td>
-              <td class="text-center"><input type="submit" class="boton boton-color" id="sumar-cantidad-btn" value="+"> </td>
-              <td class="text-center"><input type="submit" class="boton boton-sin-color" id="restar-cantidad-btn" value="-"> </td>
+              <td class="text-center"><input type="submit" class="btn btn-success" id="sumar-cantidad-btn" value="+"> </td>
+              <td class="text-center"><input type="submit" class="btn btn-warning" id="restar-cantidad-btn" value="-"> </td>
               <td class="text-center">${subTotal.toFixed(2)}</td>
           `;
             contenedor_carrito.appendChild(row);
