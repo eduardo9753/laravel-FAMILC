@@ -12,7 +12,7 @@ class HomeController extends Controller
     //FUNCION PINCIPAL Y UNICA
     public function __invoke()
     {
-        $categories  = Category::whereNotIn('id', [6, 7, 8, 9, 10, 11])->get();
+        $categories  = Category::all();
         $products = Product::join('photos', 'photos.product_id', '=', 'products.id')
             ->select(
                 'products.id',
