@@ -147,7 +147,6 @@
             <div class="alert alert-info mt-2 alert-dismissible fade show" role="alert">
                 <strong>Importante!:</strong> Realizada la compra, MercadoPago lo redireccionará a nuestro sitio web para
                 poder completar exitosamente la compra. No cierre la pestaña del navegador.
-                <input type="text" class="status_pay" id="status_pay" hidden value="1">
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         </div>
