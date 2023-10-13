@@ -25,7 +25,7 @@
         {{-- MENSAJE EL PAGO FUE CORRECTO --}}
         @if (session('pay'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Obs:</strong> {{ session('pay') }}
+                <strong>Mensaje:</strong> {{ session('pay') }}
                 <input type="text" class="status_pay" id="status_pay" hidden value="1">
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -34,7 +34,7 @@
         {{-- MENSAJE EL PAGO FUE CORRECTO --}}
         @if (session('nopay'))
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Obs:</strong> {{ session('nopay') }}
+                <strong>Mensaje:</strong> {{ session('nopay') }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif

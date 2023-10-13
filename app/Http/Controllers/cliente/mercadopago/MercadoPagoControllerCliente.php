@@ -180,12 +180,12 @@ class MercadoPagoControllerCliente extends Controller
                     //Mail::to(['j.a_alarcon_24@outlook.com', 'nsnyliz@gmail.com', 'Huamanirosase@gmail.com', 'nunezcancharimabell@gmail.com'])->send(new AdminMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
                     Mail::to($person->email)->send(new UsuarioMail($requestData['nombres'], $requestData['total_venta'], $requestData['telefono']));
                     $person = Person::where('numero_documento', '=',  $requestData['numero_documento'])->first();
-                    return redirect()->route('home')->with('pay', "se genero su compra: " . $person->nombres . "");
+                    return redirect()->route('home')->with('pay', "Agradecemos su elección. Su compra ha sido procesada, y se le ha enviado un correo electrónico con los detalles recibidos. :)" . $person->nombres . "");
                 } else {
-                    return redirect()->route('home')->with('nopay', 'No se realizó el pago correctamente');
+                    return redirect()->route('home')->with('nopay', 'Se produjo un inconveniente durante la compra. Por favor, póngase en contacto con nosotros al 922394642 para recibir el soporte necesario.');
                 }
             } else {
-                return redirect()->route('home')->with('nopay', 'No se realizó el pago correctamente');
+                return redirect()->route('home')->with('nopay', 'Se produjo un inconveniente durante la compra. Por favor, póngase en contacto con nosotros al 922394642 para recibir el soporte necesario.');
             }
         }
     }
