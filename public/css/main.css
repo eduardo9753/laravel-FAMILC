@@ -1,12 +1,12 @@
 
 /*****************************************ESTILOS HEADER*********************************************/
 #header {
-    background-image: url(../img/galeria/galeria-8.jpeg);
+    background-image: url(../img/home/taza-conocenos.jpg);
                          /*ARRIBA -  A LOS COSTADOS*/
     background-position: calc(100% - 65%) calc(100% - 65%);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 87vh;
 
     /*ACTIVAMOS POSITION RELATIVE
     position: relative;
