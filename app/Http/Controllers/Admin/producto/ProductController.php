@@ -122,7 +122,7 @@ class ProductController extends Controller
         $this->validate($request, [
             'nombre' => 'required|max:50', //METERLE UN UNIQUE
             'descripcion' => 'required',
-            'stock' => 'required',
+            //'stock' => 'required',
             'precio' => 'required',
         ]);
 
