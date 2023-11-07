@@ -14,6 +14,10 @@
     #header .header-descripcion {
         height: 50%;
     }
+
+    #header-footer .parrafo-header {
+        font-size: 18px;
+    }
    
 
     /*responsive producto*/

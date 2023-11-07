@@ -18,7 +18,10 @@ class Search extends Component
     //METODO DE BUSQUEDA
     public function getResultsProperty()
     {
-        $products = Product::where('nombre', 'LIKE', '%' . $this->search . '%')->take(10)->get();
+        $products = Product::join('photos', 'products.id', '=', 'photos.product_id')
+            ->select('products.*', 'photos.foto_uno as foto')
+            ->take(10)
+            ->get();
         return $products;
     }
 }

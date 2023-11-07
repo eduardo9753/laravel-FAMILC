@@ -16,7 +16,11 @@
                 {{-- PINTANDO LOS DATOS CON METODO "getResultsProperty" --}}
                 @forelse ($this->results as $result)
                     <a href="{{ route('product.show', ['product' => $result]) }}">
-                        <li class="list-group-item">{{ $result->nombre }}</li>
+                        <li class="list-group-item">
+                            <img src="{{ $result->foto }}" style="width: 30px;height: 30px;border-radius: 50%;"
+                                alt="...">
+                            {{ $result->nombre }}
+                        </li>
                     </a>
                 @empty
                     <li class="list-group-item">No hubo resultados</li>
