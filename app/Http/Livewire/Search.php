@@ -19,7 +19,8 @@ class Search extends Component
     public function getResultsProperty()
     {
         $products = Product::join('photos', 'products.id', '=', 'photos.product_id')
-            ->select('products.*', 'photos.foto_uno as foto')
+            ->where('products.nombre', 'LIKE', '%' . $this->search . '%')
+            ->select('products.*', 'photos.foto_uno as foto') // Selecciona las columnas que necesitas
             ->take(10)
             ->get();
         return $products;
