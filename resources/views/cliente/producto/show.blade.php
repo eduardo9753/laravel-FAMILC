@@ -43,7 +43,7 @@
 
                 <div class="taza-descripcion flex-splide-tamanio-dos">
                     <h2>{{ $product->nombre }}</h2>
-                    <p class="texto-mayuscula">{{ $product->descripcion }}</p>
+                    <p class="texto-mayuscula">{!! $product->descripcion !!}</p>
                     <p class="tamanio-precio my-4 boton-sin-color">{{ $product->precio }}</p>
                     <a target="_blank"
                         href="https://wa.me/51952955205?text=Quisiera más información del producto - Codigo:{{ $product->id }} - {{ $product->descripcion }}"
